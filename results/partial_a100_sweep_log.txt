@@ -1,0 +1,72 @@
+bundled experiments/sweep_gpu.py -> C:/Users/È²¼±ÁØ/AppData/Local/Temp/claude/c--Users-----Desktop-Coding-Complier-GPU--TPU---/df5cd41c-8a5d-41c7-baf2-a15c21e27fa3/scratchpad/sweep_gpu_bundled.py (inlined: legality)
+bundle syntax OK
+[colab] Creating session 'run-4ed2fd'...
+[colab] Session READY (run-4ed2fd). Executing /mnt/c/Users/í™©ì„ ì¤€/AppData/Local/Temp/claude/c--Users-----Desktop-Coding-Complier-GPU--TPU---/df5cd41c-8a5d-41c7-baf2-a15c21e27fa3/scratchpad/sweep_gpu_bundled.py...
+jax 0.7.2 | NVIDIA A100-SXM4-40GB
+device properties: {'smem_per_block': 166912, 'smem_per_sm': 1, 'max_threads_per_sm': 2048, 'sm_count': 108, 'compute_capability': (8, 0)}
+
+=== dtype: bf16 ===
+78 candidates to measure, 0 pruned statically
+XLA baseline: 0.931 ms (147.7 TFLOP/s)
+        (32,32,32) w4 s2:    4.657 ms |   29.5 TF/s | 0.20x XLA
+        (32,32,32) w4 s3:    4.643 ms |   29.6 TF/s | 0.20x XLA
+        (32,32,32) w4 s4:    4.658 ms |   29.5 TF/s | 0.20x XLA
+        (32,32,32) w8 s2:    6.452 ms |   21.3 TF/s | 0.14x XLA
+        (32,32,32) w8 s3:    6.460 ms |   21.3 TF/s | 0.14x XLA
+        (32,32,32) w8 s4:    6.429 ms |   21.4 TF/s | 0.14x XLA
+        (64,64,32) w4 s2:    1.946 ms |   70.6 TF/s | 0.48x XLA
+        (64,64,32) w4 s3:    1.946 ms |   70.6 TF/s | 0.48x XLA
+        (64,64,32) w4 s4:    1.966 ms |   69.9 TF/s | 0.47x XLA
+        (64,64,32) w8 s2:    3.006 ms |   45.7 TF/s | 0.31x XLA
+        (64,64,32) w8 s3:    3.031 ms |   45.4 TF/s | 0.31x XLA
+        (64,64,32) w8 s4:    3.005 ms |   45.7 TF/s | 0.31x XLA
+        (64,64,64) w4 s2:    1.729 ms |   79.5 TF/s | 0.54x XLA
+        (64,64,64) w4 s3:    1.720 ms |   79.9 TF/s | 0.54x XLA
+        (64,64,64) w4 s4:    1.707 ms |   80.5 TF/s | 0.55x XLA
+        (64,64,64) w8 s2:    3.585 ms |   38.3 TF/s | 0.26x XLA
+        (64,64,64) w8 s3:    3.607 ms |   38.1 TF/s | 0.26x XLA
+        (64,64,64) w8 s4:    3.597 ms |   38.2 TF/s | 0.26x XLA
+       (128,64,32) w4 s2:    1.622 ms |   84.7 TF/s | 0.57x XLA
+       (128,64,32) w4 s3:    1.614 ms |   85.2 TF/s | 0.58x XLA
+       (128,64,32) w4 s4:    1.583 ms |   86.8 TF/s | 0.59x XLA
+       (128,64,32) w8 s2:    1.933 ms |   71.1 TF/s | 0.48x XLA
+       (128,64,32) w8 s3:    1.943 ms |   70.7 TF/s | 0.48x XLA
+       (128,64,32) w8 s4:    1.987 ms |   69.2 TF/s | 0.47x XLA
+       (64,128,32) w4 s2:    1.366 ms |  100.6 TF/s | 0.68x XLA
+       (64,128,32) w4 s3:    1.388 ms |   99.0 TF/s | 0.67x XLA
+       (64,128,32) w4 s4:    1.402 ms |   98.0 TF/s | 0.66x XLA
+       (64,128,32) w8 s2:    1.648 ms |   83.4 TF/s | 0.56x XLA
+       (64,128,32) w8 s3:    1.652 ms |   83.2 TF/s | 0.56x XLA
+       (64,128,32) w8 s4:    1.646 ms |   83.5 TF/s | 0.57x XLA
+      (128,128,32) w4 s2:    1.199 ms |  114.6 TF/s | 0.78x XLA
+      (128,128,32) w4 s3:    1.206 ms |  113.9 TF/s | 0.77x XLA
+      (128,128,32) w4 s4:    1.201 ms |  114.5 TF/s | 0.78x XLA
+      (128,128,32) w8 s2:    2.049 ms |   67.1 TF/s | 0.45x XLA
+      (128,128,32) w8 s3:    2.039 ms |   67.4 TF/s | 0.46x XLA
+      (128,128,32) w8 s4:    2.048 ms |   67.1 TF/s | 0.45x XLA
+      (128,128,64) w4 s2:    1.904 ms |   72.2 TF/s | 0.49x XLA
+      (128,128,64) w4 s3:    1.922 ms |   71.5 TF/s | 0.48x XLA
+      (128,128,64) w4 s4:    1.881 ms |   73.1 TF/s | 0.49x XLA
+      (128,128,64) w8 s2:    1.593 ms |   86.3 TF/s | 0.58x XLA
+      (128,128,64) w8 s3:    1.592 ms |   86.3 TF/s | 0.58x XLA
+      (128,128,64) w8 s4:    1.592 ms |   86.3 TF/s | 0.58x XLA
+      (128,256,32) w4 s2: FAILED [launch_resources]
+      (128,256,32) w4 s3: FAILED [launch_resources]
+      (128,256,32) w4 s4: FAILED [launch_resources]
+      (128,256,32) w8 s2:    1.340 ms |  102.6 TF/s | 0.69x XLA
+      (128,256,32) w8 s3:    1.334 ms |  103.0 TF/s | 0.70x XLA
+      (128,256,32) w8 s4:    1.338 ms |  102.7 TF/s | 0.70x XLA
+      (128,256,64) w4 s2: FAILED [launch_resources]
+      (128,256,64) w4 s3: FAILED [launch_resources]
+      (128,256,64) w4 s4: FAILED [launch_resources]
+      (128,256,64) w8 s2:    1.333 ms |  103.1 TF/s | 0.70x XLA
+      (128,256,64) w8 s3:    1.350 ms |  101.8 TF/s | 0.69x XLA
+      (128,256,64) w8 s4:    1.324 ms |  103.8 TF/s | 0.70x XLA
+      (256,128,32) w4 s2: FAILED [launch_resources]
+      (256,128,32) w4 s3: FAILED [launch_resources]
+      (256,128,32) w4 s4: FAILED [launch_resources]
+      (256,128,32) w8 s2:    1.541 ms |   89.2 TF/s | 0.60x XLA
+      (256,128,32) w8 s3:    1.546 ms |   88.9 TF/s | 0.60x XLA
+      (256,128,32) w8 s4:    1.577 ms |   87.1 TF/s | 0.59x XLA
+      (256,128,64) w4 s2: FAILED [launch_resources]
+      (256,128,64) w4 s3: FAILED [launch_resources]
