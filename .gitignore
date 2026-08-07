@@ -8,3 +8,4 @@ build/
 .ipynb_checkpoints/
 results/*.tmp
 .DS_Store
+paper/
