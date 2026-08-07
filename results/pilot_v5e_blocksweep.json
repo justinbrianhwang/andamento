@@ -1,0 +1,20 @@
+{
+  "experiment": "pilot_blocksweep",
+  "date": "2026-08-07",
+  "device": "TPU v5 lite",
+  "runtime": "Colab (colab run --tpu v5e1)",
+  "jax": "0.11.0",
+  "note": "libtpu aligned via 'pip install -U jax[tpu]' bootstrap; Colab image shipped jax 0.7.2 with stale libtpu (Mosaic version 8 vs <=7 mismatch)",
+  "shape": [4096, 4096, 4096],
+  "dtype": "bf16",
+  "timing": "median of 20 runs, first run excluded",
+  "xla_ms": 0.9333399999889025,
+  "results": [
+    {"config": [128, 128, 128], "status": "ok", "median_ms": 11.656131500018319, "iqr_ms": 0.0358204999741929, "compile_s": 0.07121142700003702, "tflops": 11.791129284341379, "vs_xla": 0.08007287838057041, "max_abs_err_vs_xla": 0.0},
+    {"config": [256, 256, 256], "status": "ok", "median_ms": 2.699580000012247, "iqr_ms": 0.014586750012313132, "compile_s": 0.07889630800002578, "tflops": 50.91123562605164, "vs_xla": 0.34573526251663894, "max_abs_err_vs_xla": 1.0},
+    {"config": [512, 512, 512], "status": "ok", "median_ms": 1.1833449999869572, "iqr_ms": 0.013582500002939923, "compile_s": 0.18692084899998918, "tflops": 116.1444493985396, "vs_xla": 0.7887302519545777, "max_abs_err_vs_xla": 1.0},
+    {"config": [512, 1024, 1024], "status": "ok", "median_ms": 0.9876000000019758, "iqr_ms": 0.05859724998913407, "compile_s": 0.49812554900000805, "tflops": 139.16459444281594, "vs_xla": 0.9450587282169252, "max_abs_err_vs_xla": 1.0},
+    {"config": [1024, 1024, 512], "status": "ok", "median_ms": 0.9685549999858267, "iqr_ms": 0.011985750020926389, "compile_s": 0.48996489899997187, "tflops": 141.90103140659147, "vs_xla": 0.9636417136895277, "max_abs_err_vs_xla": 1.0},
+    {"config": [2048, 2048, 512], "status": "fail", "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: E1001: CompileTimeScopedVmemOom: Ran out of memory in memory space vmem while allocating on stack for %matmul.1 = bf16[4096,4096]{1,0:T(8,128)(2,1)} custom-call(%x_ref.1, %y_ref.1)"}
+  ]
+}

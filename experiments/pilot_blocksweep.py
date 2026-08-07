@@ -9,7 +9,17 @@ The VM is released automatically when the script exits.
 
 import functools
 import json
+import subprocess
+import sys
 import time
+
+# Colab images can ship a libtpu older than the preinstalled jax, which makes
+# every pallas_call fail with "Unsupported version" at Mosaic deserialization.
+# Align libtpu with jax before jax is first imported in this process.
+subprocess.run(
+    [sys.executable, "-m", "pip", "install", "-q", "-U", "jax[tpu]"],
+    check=True,
+)
 
 import jax
 import jax.numpy as jnp
