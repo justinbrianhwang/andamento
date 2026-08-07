@@ -8,8 +8,14 @@ candidate is measured, and each measurement is stored with the device
 properties and static features needed to learn the legality boundary rather
 than assume it.
 
-Run via:  colab run --gpu A100 experiments/sweep_gpu.py
-Optional: pass a dtype to restrict the sweep, e.g. `... sweep_gpu.py bf16`.
+`colab run` uploads a single file into a notebook kernel, so bundle first:
+
+    python tools/bundle.py experiments/sweep_gpu.py -o /tmp/sweep.py
+    colab run --gpu A100 --timeout 1800 /tmp/sweep.py bf16
+
+The default --timeout is 30 s, which the CLI spends waiting for the reply
+after the script finishes; anything longer is reported as a failure even
+though the run succeeded.
 """
 
 import functools

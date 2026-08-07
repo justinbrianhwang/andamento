@@ -179,25 +179,44 @@ TPU_VMEM_BYTES = {  # per TensorCore, from the public hardware tables
 }
 
 
-def tpu_config_reasons(bm, bk, bn, dtype_name, device_kind, buffers=2):
-    """Reasons a Pallas TPU block configuration cannot run."""
-    reasons = []
-    elem = DTYPE_BYTES.get(dtype_name, 2)
+def tpu_vmem_bytes(bm, bk, bn, dtype_name, buffers=2):
+    """Naive estimate of VMEM demand: double-buffered operands plus accumulator.
 
+    Like the GPU estimate, this does not predict the failures we measured.
+    On v5e, (2048, 2048, 512) bf16 works out to roughly 25 MiB against a
+    nominal 128 MiB of VMEM, yet it fails with CompileTimeScopedVmemOom —
+    Mosaic's scoped VMEM budget is far smaller than the chip's VMEM, and the
+    published capacity is not the number that binds. Record it, do not act
+    on it.
+    """
+    elem = DTYPE_BYTES.get(dtype_name, 2)
+    return (bm * bk + bk * bn) * elem * buffers + bm * bn * 4
+
+
+def tpu_config_features(bm, bk, bn, dtype_name, device_kind, buffers=2):
+    """Static features to store next to a TPU measurement."""
+    vmem = next((v for k, v in TPU_VMEM_BYTES.items() if device_kind.startswith(k)), None)
+    need = tpu_vmem_bytes(bm, bk, bn, dtype_name, buffers)
+    return {
+        "vmem_estimate_bytes": need,
+        "vmem_nominal_bytes": vmem,
+        "vmem_ratio": (need / vmem) if vmem else None,
+        "operand_elems": bm * bk + bk * bn,
+        "accum_bytes": bm * bn * 4,
+        "tile_elems": bm * bn,
+    }
+
+
+def tpu_config_reasons(bm, bk, bn, dtype_name, device_kind, buffers=2):
+    """Reasons a Pallas TPU block configuration cannot run.
+
+    Only the tiling rules Mosaic documents, which are cheap and certain.
+    Capacity is deliberately not checked here — see `tpu_vmem_bytes`.
+    """
+    reasons = []
     if bm % TPU_TILE[0]:
         reasons.append(f"block_m {bm} not a multiple of {TPU_TILE[0]}")
     for name, val in (("block_k", bk), ("block_n", bn)):
         if val % TPU_TILE[1]:
             reasons.append(f"{name} {val} not a multiple of {TPU_TILE[1]}")
-
-    vmem = next((v for k, v in TPU_VMEM_BYTES.items() if device_kind.startswith(k)), None)
-    if vmem:
-        # Operand tiles are double-buffered for the pipeline; the fp32
-        # accumulator scratch is resident for the whole K sweep.
-        operands = (bm * bk + bk * bn) * elem * buffers
-        accum = bm * bn * 4
-        need = operands + accum
-        if need > vmem:
-            reasons.append(f"needs >={need // 1024} KiB VMEM, limit {vmem // 1024} KiB")
-
     return reasons
