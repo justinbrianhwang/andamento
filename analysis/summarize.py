@@ -9,6 +9,7 @@ whether a configuration tuned on one device stays good on another.
 import glob
 import json
 import os
+import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RESULTS_DIR = os.path.join(ROOT, "results")
@@ -32,6 +33,8 @@ def load():
     for path in sorted(glob.glob(os.path.join(RESULTS_DIR, "*.json"))):
         with open(path, encoding="utf-8") as f:
             blob = json.load(f)
+        if "sweeps" not in blob and "results" not in blob:
+            continue  # capability probes etc. — not sweep data
         sweeps = blob.get("sweeps") or [{
             "dtype": blob.get("dtype", "bf16"),
             "xla_ms": blob.get("xla_ms"),
@@ -113,7 +116,10 @@ def main():
     with open(OUT, "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
     print(f"wrote {OUT}")
-    print("\n".join(lines[:40]))
+    # Windows consoles may be cp949/cp1252; don't let a preview kill the run.
+    preview = "\n".join(lines[:40])
+    print(preview.encode(sys.stdout.encoding or "utf-8", errors="replace")
+          .decode(sys.stdout.encoding or "utf-8"))
 
 
 if __name__ == "__main__":
