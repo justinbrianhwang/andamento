@@ -14,10 +14,6 @@ Andamento asks a different question: **given only 20–100 real TPU measurements
 2. **Joint search beyond block sizes** — grid order, `dimension_semantics`, memory spaces, scratch buffers, and pipeline buffer counts, which prior work leaves untuned.
 3. **An open Pallas configuration–performance dataset** — each measurement labeled with runtime distribution, compile outcome, *and numerical error* (abs/rel/ULP vs. an FP64 reference), on real TPU hardware.
 
-## Status
-
-Early research phase (2026-08). Pilot experiments reproduce the block-size sensitivity of the official Pallas matmul guide on a single Colab TPU v5e.
-
 ## Related work
 
 - [Tokamax](https://github.com/openxla/tokamax) — exhaustive autotuning inside the `tokamax.Op` abstraction
