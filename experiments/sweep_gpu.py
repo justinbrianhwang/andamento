@@ -166,10 +166,18 @@ def main():
     wanted = sys.argv[1:] or list(DTYPES)
     sweeps = [sweep(n, DTYPES[n], props) for n in wanted if n in DTYPES]
 
+    payload = {"device": dev.device_kind, "jax": jax.__version__,
+               "properties": props, "shape": [M, K, N], "sweeps": sweeps}
     print("\n===RESULTS_JSON===")
-    print(json.dumps({"device": dev.device_kind, "jax": jax.__version__,
-                      "properties": props, "shape": [M, K, N],
-                      "sweeps": sweeps}, default=str))
+    print(json.dumps(payload, default=str))
+
+    # Also write a file so a collaborator running this locally has one
+    # obvious artifact to send back, immune to copy-paste truncation.
+    safe = "".join(c if c.isalnum() else "_" for c in dev.device_kind)
+    out = f"sweep_result_{safe}.json"
+    with open(out, "w", encoding="utf-8") as f:
+        json.dump(payload, f, default=str, indent=1)
+    print(f"[saved] {out}")
 
 
 if __name__ == "__main__":
