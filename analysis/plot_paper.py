@@ -98,11 +98,12 @@ def fig_landscapes():
                   "(worst / best, log scale)")
     handles = [Rectangle((0, 0), 1, 1, color=TYPE_COLOR[t]) for t in
                ("loud", "refusal", "hybrid", "cliff", "none")]
-    ax.legend(handles, ["loud (compile-time OOM)", "launch refusal",
-                        "hybrid (refusal + cliff)", "silent cliff",
-                        "no failures"],
+    ax.legend(handles, ["compile-rejected (TPU)", "launch-refused",
+                        "hybrid (refusal + slow tail)",
+                        "feasible, heavy tail",
+                        "feasible, moderate tail"],
               loc="lower right", frameon=False, ncol=1,
-              title="failure structure", title_fontsize=7.5)
+              title="outcome class", title_fontsize=7.5)
     fig.tight_layout()
     fig.savefig(f"{OUT}/fig-landscapes.pdf")
     plt.close(fig)
