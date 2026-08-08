@@ -1,0 +1,856 @@
+{
+ "seeds": 300,
+ "ridge_lambda": 1.0,
+ "knn_k": 3,
+ "fail_penalty": 2.0,
+ "epsilon": 0.1,
+ "devices": {
+  "NVIDIA A100-SXM4-40GB": {
+   "random@5": {
+    "mean_regret": 1.2795854328620908,
+    "frac_within_5pct": 0.18666666666666668,
+    "mean_wasted": 1.6733333333333333
+   },
+   "tpe@5": {
+    "mean_regret": 1.2795854328620908,
+    "frac_within_5pct": 0.18666666666666668,
+    "mean_wasted": 1.6733333333333333
+   },
+   "surrogate@5": {
+    "mean_regret": 1.2795854328620908,
+    "frac_within_5pct": 0.18666666666666668,
+    "mean_wasted": 1.6733333333333333
+   },
+   "random@10": {
+    "mean_regret": 1.1145424690585661,
+    "frac_within_5pct": 0.3333333333333333,
+    "mean_wasted": 3.453333333333333
+   },
+   "tpe@10": {
+    "mean_regret": 1.1532411301657137,
+    "frac_within_5pct": 0.25,
+    "mean_wasted": 2.7733333333333334
+   },
+   "surrogate@10": {
+    "mean_regret": 1.074197098385709,
+    "frac_within_5pct": 0.5366666666666666,
+    "mean_wasted": 3.23
+   },
+   "random@20": {
+    "mean_regret": 1.062372655910324,
+    "frac_within_5pct": 0.5366666666666666,
+    "mean_wasted": 7.02
+   },
+   "tpe@20": {
+    "mean_regret": 1.091398620004604,
+    "frac_within_5pct": 0.45,
+    "mean_wasted": 5.73
+   },
+   "surrogate@20": {
+    "mean_regret": 1.0152125617425896,
+    "frac_within_5pct": 0.8733333333333333,
+    "mean_wasted": 5.523333333333333
+   },
+   "random@40": {
+    "mean_regret": 1.0164761708342,
+    "frac_within_5pct": 0.8733333333333333,
+    "mean_wasted": 13.88
+   },
+   "tpe@40": {
+    "mean_regret": 1.047893151281647,
+    "frac_within_5pct": 0.5633333333333334,
+    "mean_wasted": 11.953333333333333
+   },
+   "surrogate@40": {
+    "mean_regret": 1.0020574363011996,
+    "frac_within_5pct": 0.99,
+    "mean_wasted": 9.816666666666666
+   },
+   "random@60": {
+    "mean_regret": 1.0014979732051414,
+    "frac_within_5pct": 0.9966666666666667,
+    "mean_wasted": 20.813333333333333
+   },
+   "tpe@60": {
+    "mean_regret": 1.0,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 18.596666666666668
+   },
+   "surrogate@60": {
+    "mean_regret": 1.000294402865566,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 14.996666666666666
+   }
+  },
+  "NVIDIA L4": {
+   "random@5": {
+    "mean_regret": 1.1504474982359458,
+    "frac_within_5pct": 0.4633333333333333,
+    "mean_wasted": 0.0
+   },
+   "tpe@5": {
+    "mean_regret": 1.1504474982359458,
+    "frac_within_5pct": 0.4633333333333333,
+    "mean_wasted": 0.0
+   },
+   "surrogate@5": {
+    "mean_regret": 1.1504474982359458,
+    "frac_within_5pct": 0.4633333333333333,
+    "mean_wasted": 0.0
+   },
+   "random@10": {
+    "mean_regret": 1.0433632137278657,
+    "frac_within_5pct": 0.7166666666666667,
+    "mean_wasted": 0.0
+   },
+   "tpe@10": {
+    "mean_regret": 1.0546130286501867,
+    "frac_within_5pct": 0.6266666666666667,
+    "mean_wasted": 0.0
+   },
+   "surrogate@10": {
+    "mean_regret": 1.0867007102440236,
+    "frac_within_5pct": 0.6,
+    "mean_wasted": 0.0
+   },
+   "random@20": {
+    "mean_regret": 1.0145631005978273,
+    "frac_within_5pct": 0.9366666666666666,
+    "mean_wasted": 0.0
+   },
+   "tpe@20": {
+    "mean_regret": 1.0168208889795503,
+    "frac_within_5pct": 0.9466666666666667,
+    "mean_wasted": 0.0
+   },
+   "surrogate@20": {
+    "mean_regret": 1.034872159267853,
+    "frac_within_5pct": 0.75,
+    "mean_wasted": 0.0
+   },
+   "random@40": {
+    "mean_regret": 1.0047544455232156,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 0.0
+   },
+   "tpe@40": {
+    "mean_regret": 1.011803750249618,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 0.0
+   },
+   "surrogate@40": {
+    "mean_regret": 1.0091925126295374,
+    "frac_within_5pct": 0.9266666666666666,
+    "mean_wasted": 0.0
+   },
+   "random@60": {
+    "mean_regret": 1.0017350221602284,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 0.0
+   },
+   "tpe@60": {
+    "mean_regret": 1.0000200128240635,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 0.0
+   },
+   "surrogate@60": {
+    "mean_regret": 1.0001006085047592,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 0.0
+   }
+  },
+  "NVIDIA RTX PRO 6000 Blackwell Server Edition": {
+   "random@5": {
+    "mean_regret": 1.1390466293095554,
+    "frac_within_5pct": 0.5766666666666667,
+    "mean_wasted": 0.0
+   },
+   "tpe@5": {
+    "mean_regret": 1.1390466293095554,
+    "frac_within_5pct": 0.5766666666666667,
+    "mean_wasted": 0.0
+   },
+   "surrogate@5": {
+    "mean_regret": 1.1390466293095554,
+    "frac_within_5pct": 0.5766666666666667,
+    "mean_wasted": 0.0
+   },
+   "random@10": {
+    "mean_regret": 1.0374119889870193,
+    "frac_within_5pct": 0.84,
+    "mean_wasted": 0.0
+   },
+   "tpe@10": {
+    "mean_regret": 1.0591170435416883,
+    "frac_within_5pct": 0.75,
+    "mean_wasted": 0.0
+   },
+   "surrogate@10": {
+    "mean_regret": 1.0826498121798238,
+    "frac_within_5pct": 0.7233333333333334,
+    "mean_wasted": 0.0
+   },
+   "random@20": {
+    "mean_regret": 1.0156202278097546,
+    "frac_within_5pct": 0.99,
+    "mean_wasted": 0.0
+   },
+   "tpe@20": {
+    "mean_regret": 1.0161653171687592,
+    "frac_within_5pct": 0.9466666666666667,
+    "mean_wasted": 0.0
+   },
+   "surrogate@20": {
+    "mean_regret": 1.0377902452379295,
+    "frac_within_5pct": 0.8533333333333334,
+    "mean_wasted": 0.0
+   },
+   "random@40": {
+    "mean_regret": 1.0073317272038753,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 0.0
+   },
+   "tpe@40": {
+    "mean_regret": 1.0082717327989503,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 0.0
+   },
+   "surrogate@40": {
+    "mean_regret": 1.0085153280131358,
+    "frac_within_5pct": 0.9933333333333333,
+    "mean_wasted": 0.0
+   },
+   "random@60": {
+    "mean_regret": 1.0031486467920978,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 0.0
+   },
+   "tpe@60": {
+    "mean_regret": 1.0,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 0.0
+   },
+   "surrogate@60": {
+    "mean_regret": 1.000044711300444,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 0.0
+   }
+  },
+  "NVIDIA H100 NVL": {
+   "random@5": {
+    "mean_regret": 1.1946962508755634,
+    "frac_within_5pct": 0.3433333333333333,
+    "mean_wasted": 0.0
+   },
+   "tpe@5": {
+    "mean_regret": 1.1946962508755634,
+    "frac_within_5pct": 0.3433333333333333,
+    "mean_wasted": 0.0
+   },
+   "surrogate@5": {
+    "mean_regret": 1.1946962508755634,
+    "frac_within_5pct": 0.3433333333333333,
+    "mean_wasted": 0.0
+   },
+   "random@10": {
+    "mean_regret": 1.0563709752634305,
+    "frac_within_5pct": 0.6,
+    "mean_wasted": 0.0
+   },
+   "tpe@10": {
+    "mean_regret": 1.0666150242873675,
+    "frac_within_5pct": 0.6866666666666666,
+    "mean_wasted": 0.0
+   },
+   "surrogate@10": {
+    "mean_regret": 1.056062134547448,
+    "frac_within_5pct": 0.7433333333333333,
+    "mean_wasted": 0.0
+   },
+   "random@20": {
+    "mean_regret": 1.0171427717165105,
+    "frac_within_5pct": 0.8333333333333334,
+    "mean_wasted": 0.0
+   },
+   "tpe@20": {
+    "mean_regret": 1.0113145743873593,
+    "frac_within_5pct": 0.9466666666666667,
+    "mean_wasted": 0.0
+   },
+   "surrogate@20": {
+    "mean_regret": 1.0102280684056117,
+    "frac_within_5pct": 0.96,
+    "mean_wasted": 0.0
+   },
+   "random@40": {
+    "mean_regret": 1.0033184011704634,
+    "frac_within_5pct": 0.9933333333333333,
+    "mean_wasted": 0.0
+   },
+   "tpe@40": {
+    "mean_regret": 1.0000401648850854,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 0.0
+   },
+   "surrogate@40": {
+    "mean_regret": 1.0010662776119708,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 0.0
+   },
+   "random@60": {
+    "mean_regret": 1.0009829499888334,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 0.0
+   },
+   "tpe@60": {
+    "mean_regret": 1.0,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 0.0
+   },
+   "surrogate@60": {
+    "mean_regret": 1.0,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 0.0
+   }
+  },
+  "NVIDIA B200": {
+   "random@5": {
+    "mean_regret": 1.1783435627072891,
+    "frac_within_5pct": 0.17333333333333334,
+    "mean_wasted": 0.0
+   },
+   "tpe@5": {
+    "mean_regret": 1.1783435627072891,
+    "frac_within_5pct": 0.17333333333333334,
+    "mean_wasted": 0.0
+   },
+   "surrogate@5": {
+    "mean_regret": 1.1783435627072891,
+    "frac_within_5pct": 0.17333333333333334,
+    "mean_wasted": 0.0
+   },
+   "random@10": {
+    "mean_regret": 1.1068536103287765,
+    "frac_within_5pct": 0.3233333333333333,
+    "mean_wasted": 0.0
+   },
+   "tpe@10": {
+    "mean_regret": 1.0756477661438282,
+    "frac_within_5pct": 0.4633333333333333,
+    "mean_wasted": 0.0
+   },
+   "surrogate@10": {
+    "mean_regret": 1.1258934072272202,
+    "frac_within_5pct": 0.28,
+    "mean_wasted": 0.0
+   },
+   "random@20": {
+    "mean_regret": 1.059204575688828,
+    "frac_within_5pct": 0.5833333333333334,
+    "mean_wasted": 0.0
+   },
+   "tpe@20": {
+    "mean_regret": 1.008454294304104,
+    "frac_within_5pct": 0.97,
+    "mean_wasted": 0.0
+   },
+   "surrogate@20": {
+    "mean_regret": 1.0494723721076846,
+    "frac_within_5pct": 0.75,
+    "mean_wasted": 0.0
+   },
+   "random@40": {
+    "mean_regret": 1.0255722389554707,
+    "frac_within_5pct": 0.8666666666666667,
+    "mean_wasted": 0.0
+   },
+   "tpe@40": {
+    "mean_regret": 1.000106171963583,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 0.0
+   },
+   "surrogate@40": {
+    "mean_regret": 1.0037160187254024,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 0.0
+   },
+   "random@60": {
+    "mean_regret": 1.0076000733078403,
+    "frac_within_5pct": 0.9933333333333333,
+    "mean_wasted": 0.0
+   },
+   "tpe@60": {
+    "mean_regret": 1.0,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 0.0
+   },
+   "surrogate@60": {
+    "mean_regret": 1.0,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 0.0
+   }
+  },
+  "NVIDIA GeForce RTX 3090": {
+   "random@5": {
+    "mean_regret": 1.2169035919353097,
+    "frac_within_5pct": 0.29333333333333333,
+    "mean_wasted": 1.0
+   },
+   "tpe@5": {
+    "mean_regret": 1.2169035919353097,
+    "frac_within_5pct": 0.29333333333333333,
+    "mean_wasted": 1.0
+   },
+   "surrogate@5": {
+    "mean_regret": 1.2169035919353097,
+    "frac_within_5pct": 0.29333333333333333,
+    "mean_wasted": 1.0
+   },
+   "random@10": {
+    "mean_regret": 1.1015071303862647,
+    "frac_within_5pct": 0.49666666666666665,
+    "mean_wasted": 1.9766666666666666
+   },
+   "tpe@10": {
+    "mean_regret": 1.0722392540722567,
+    "frac_within_5pct": 0.64,
+    "mean_wasted": 1.4566666666666668
+   },
+   "surrogate@10": {
+    "mean_regret": 1.092042817575026,
+    "frac_within_5pct": 0.51,
+    "mean_wasted": 1.9333333333333333
+   },
+   "random@20": {
+    "mean_regret": 1.036829332520509,
+    "frac_within_5pct": 0.75,
+    "mean_wasted": 4.006666666666667
+   },
+   "tpe@20": {
+    "mean_regret": 1.0115371519585596,
+    "frac_within_5pct": 0.9466666666666667,
+    "mean_wasted": 2.466666666666667
+   },
+   "surrogate@20": {
+    "mean_regret": 1.0377761241525867,
+    "frac_within_5pct": 0.83,
+    "mean_wasted": 3.01
+   },
+   "random@40": {
+    "mean_regret": 1.0080771333038403,
+    "frac_within_5pct": 0.9833333333333333,
+    "mean_wasted": 7.716666666666667
+   },
+   "tpe@40": {
+    "mean_regret": 1.0000117491559288,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 6.8
+   },
+   "surrogate@40": {
+    "mean_regret": 1.0007525238751314,
+    "frac_within_5pct": 0.9966666666666667,
+    "mean_wasted": 5.41
+   },
+   "random@60": {
+    "mean_regret": 1.0024318269343804,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 11.686666666666667
+   },
+   "tpe@60": {
+    "mean_regret": 1.0,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 8.983333333333333
+   },
+   "surrogate@60": {
+    "mean_regret": 1.0,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 8.113333333333333
+   }
+  },
+  "NVIDIA GeForce RTX 4060 Laptop GPU": {
+   "random@5": {
+    "mean_regret": 1.1408938734157545,
+    "frac_within_5pct": 0.15,
+    "mean_wasted": 0.8966666666666666
+   },
+   "tpe@5": {
+    "mean_regret": 1.1408938734157545,
+    "frac_within_5pct": 0.15,
+    "mean_wasted": 0.8966666666666666
+   },
+   "surrogate@5": {
+    "mean_regret": 1.1408938734157545,
+    "frac_within_5pct": 0.15,
+    "mean_wasted": 0.8966666666666666
+   },
+   "random@10": {
+    "mean_regret": 1.0628519566481813,
+    "frac_within_5pct": 0.32,
+    "mean_wasted": 1.8
+   },
+   "tpe@10": {
+    "mean_regret": 1.0630125232946699,
+    "frac_within_5pct": 0.30333333333333334,
+    "mean_wasted": 1.2633333333333334
+   },
+   "surrogate@10": {
+    "mean_regret": 1.061564924333384,
+    "frac_within_5pct": 0.36,
+    "mean_wasted": 2.033333333333333
+   },
+   "random@20": {
+    "mean_regret": 1.0390150757673702,
+    "frac_within_5pct": 0.5566666666666666,
+    "mean_wasted": 3.92
+   },
+   "tpe@20": {
+    "mean_regret": 1.038452044776185,
+    "frac_within_5pct": 0.6033333333333334,
+    "mean_wasted": 2.03
+   },
+   "surrogate@20": {
+    "mean_regret": 1.0308255160569209,
+    "frac_within_5pct": 0.6533333333333333,
+    "mean_wasted": 3.1333333333333333
+   },
+   "random@40": {
+    "mean_regret": 1.0151782445946163,
+    "frac_within_5pct": 0.8933333333333333,
+    "mean_wasted": 7.666666666666667
+   },
+   "tpe@40": {
+    "mean_regret": 1.0019160745854396,
+    "frac_within_5pct": 0.9966666666666667,
+    "mean_wasted": 3.8366666666666664
+   },
+   "surrogate@40": {
+    "mean_regret": 1.0177234632177998,
+    "frac_within_5pct": 0.7833333333333333,
+    "mean_wasted": 5.23
+   },
+   "random@60": {
+    "mean_regret": 1.0056345174474222,
+    "frac_within_5pct": 0.9866666666666667,
+    "mean_wasted": 11.62
+   },
+   "tpe@60": {
+    "mean_regret": 1.0,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 6.416666666666667
+   },
+   "surrogate@60": {
+    "mean_regret": 1.0007520225270359,
+    "frac_within_5pct": 0.99,
+    "mean_wasted": 7.72
+   }
+  },
+  "NVIDIA GeForce RTX 4090": {
+   "random@5": {
+    "mean_regret": 1.1489322516228662,
+    "frac_within_5pct": 0.19333333333333333,
+    "mean_wasted": 1.4933333333333334
+   },
+   "tpe@5": {
+    "mean_regret": 1.1489322516228662,
+    "frac_within_5pct": 0.19333333333333333,
+    "mean_wasted": 1.4933333333333334
+   },
+   "surrogate@5": {
+    "mean_regret": 1.1489322516228662,
+    "frac_within_5pct": 0.19333333333333333,
+    "mean_wasted": 1.4933333333333334
+   },
+   "random@10": {
+    "mean_regret": 1.0772382228779693,
+    "frac_within_5pct": 0.36666666666666664,
+    "mean_wasted": 3.0433333333333334
+   },
+   "tpe@10": {
+    "mean_regret": 1.0786824387685388,
+    "frac_within_5pct": 0.31333333333333335,
+    "mean_wasted": 2.4233333333333333
+   },
+   "surrogate@10": {
+    "mean_regret": 1.0542208049034292,
+    "frac_within_5pct": 0.49666666666666665,
+    "mean_wasted": 2.75
+   },
+   "random@20": {
+    "mean_regret": 1.040900270196243,
+    "frac_within_5pct": 0.58,
+    "mean_wasted": 6.27
+   },
+   "tpe@20": {
+    "mean_regret": 1.0455262936659888,
+    "frac_within_5pct": 0.4633333333333333,
+    "mean_wasted": 4.613333333333333
+   },
+   "surrogate@20": {
+    "mean_regret": 1.0168314144293098,
+    "frac_within_5pct": 0.8833333333333333,
+    "mean_wasted": 4.706666666666667
+   },
+   "random@40": {
+    "mean_regret": 1.0133309143795908,
+    "frac_within_5pct": 0.9133333333333333,
+    "mean_wasted": 12.333333333333334
+   },
+   "tpe@40": {
+    "mean_regret": 1.0340529764165778,
+    "frac_within_5pct": 0.5233333333333333,
+    "mean_wasted": 11.14
+   },
+   "surrogate@40": {
+    "mean_regret": 1.0003940498156014,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 7.4
+   },
+   "random@60": {
+    "mean_regret": 1.004981962488534,
+    "frac_within_5pct": 0.98,
+    "mean_wasted": 18.513333333333332
+   },
+   "tpe@60": {
+    "mean_regret": 1.0000431686662896,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 16.153333333333332
+   },
+   "surrogate@60": {
+    "mean_regret": 1.0,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 12.11
+   }
+  },
+  "NVIDIA GeForce RTX 5090": {
+   "random@5": {
+    "mean_regret": 1.100547684612417,
+    "frac_within_5pct": 0.4766666666666667,
+    "mean_wasted": 1.4933333333333334
+   },
+   "tpe@5": {
+    "mean_regret": 1.100547684612417,
+    "frac_within_5pct": 0.4766666666666667,
+    "mean_wasted": 1.4933333333333334
+   },
+   "surrogate@5": {
+    "mean_regret": 1.100547684612417,
+    "frac_within_5pct": 0.4766666666666667,
+    "mean_wasted": 1.4933333333333334
+   },
+   "random@10": {
+    "mean_regret": 1.0348669655407894,
+    "frac_within_5pct": 0.78,
+    "mean_wasted": 3.0433333333333334
+   },
+   "tpe@10": {
+    "mean_regret": 1.0418164274343387,
+    "frac_within_5pct": 0.81,
+    "mean_wasted": 2.1333333333333333
+   },
+   "surrogate@10": {
+    "mean_regret": 1.0398172078771513,
+    "frac_within_5pct": 0.77,
+    "mean_wasted": 2.5833333333333335
+   },
+   "random@20": {
+    "mean_regret": 1.018948849955435,
+    "frac_within_5pct": 0.9466666666666667,
+    "mean_wasted": 6.27
+   },
+   "tpe@20": {
+    "mean_regret": 1.0206515810618457,
+    "frac_within_5pct": 0.9266666666666666,
+    "mean_wasted": 3.8533333333333335
+   },
+   "surrogate@20": {
+    "mean_regret": 1.0129492268738387,
+    "frac_within_5pct": 0.9333333333333333,
+    "mean_wasted": 4.25
+   },
+   "random@40": {
+    "mean_regret": 1.0075899216453152,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 12.333333333333334
+   },
+   "tpe@40": {
+    "mean_regret": 1.0001113195248168,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 7.84
+   },
+   "surrogate@40": {
+    "mean_regret": 1.0,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 6.926666666666667
+   },
+   "random@60": {
+    "mean_regret": 1.0026900932540475,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 18.513333333333332
+   },
+   "tpe@60": {
+    "mean_regret": 1.0,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 14.486666666666666
+   },
+   "surrogate@60": {
+    "mean_regret": 1.0,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 10.93
+   }
+  },
+  "TPU v5 lite": {
+   "random@5": {
+    "mean_regret": 1.2922848069906385,
+    "frac_within_5pct": 0.18729096989966554,
+    "mean_wasted": 1.2675585284280937
+   },
+   "tpe@5": {
+    "mean_regret": 1.2922848069906385,
+    "frac_within_5pct": 0.18729096989966554,
+    "mean_wasted": 1.2675585284280937
+   },
+   "surrogate@5": {
+    "mean_regret": 1.2922848069906385,
+    "frac_within_5pct": 0.18729096989966554,
+    "mean_wasted": 1.2675585284280937
+   },
+   "random@10": {
+    "mean_regret": 1.1223882155849254,
+    "frac_within_5pct": 0.33666666666666667,
+    "mean_wasted": 2.43
+   },
+   "tpe@10": {
+    "mean_regret": 1.0913575543044618,
+    "frac_within_5pct": 0.54,
+    "mean_wasted": 2.566666666666667
+   },
+   "surrogate@10": {
+    "mean_regret": 1.0786792193541794,
+    "frac_within_5pct": 0.4666666666666667,
+    "mean_wasted": 3.296666666666667
+   },
+   "random@20": {
+    "mean_regret": 1.052136741244035,
+    "frac_within_5pct": 0.6333333333333333,
+    "mean_wasted": 4.803333333333334
+   },
+   "tpe@20": {
+    "mean_regret": 1.025116687969137,
+    "frac_within_5pct": 0.92,
+    "mean_wasted": 5.496666666666667
+   },
+   "surrogate@20": {
+    "mean_regret": 1.0116127200565261,
+    "frac_within_5pct": 0.9666666666666667,
+    "mean_wasted": 5.766666666666667
+   },
+   "random@40": {
+    "mean_regret": 1.0206369410271887,
+    "frac_within_5pct": 0.9166666666666666,
+    "mean_wasted": 9.363333333333333
+   },
+   "tpe@40": {
+    "mean_regret": 1.006093274613123,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 11.42
+   },
+   "surrogate@40": {
+    "mean_regret": 1.0023630947974518,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 8.236666666666666
+   },
+   "random@60": {
+    "mean_regret": 1.011422001390343,
+    "frac_within_5pct": 0.9866666666666667,
+    "mean_wasted": 13.896666666666667
+   },
+   "tpe@60": {
+    "mean_regret": 1.000235551229902,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 17.363333333333333
+   },
+   "surrogate@60": {
+    "mean_regret": 1.0007407331467366,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 10.49
+   }
+  },
+  "TPU v6 lite": {
+   "random@5": {
+    "mean_regret": 1.4548381366294199,
+    "frac_within_5pct": 0.07666666666666666,
+    "mean_wasted": 0.3466666666666667
+   },
+   "tpe@5": {
+    "mean_regret": 1.4548381366294199,
+    "frac_within_5pct": 0.07666666666666666,
+    "mean_wasted": 0.3466666666666667
+   },
+   "surrogate@5": {
+    "mean_regret": 1.4548381366294199,
+    "frac_within_5pct": 0.07666666666666666,
+    "mean_wasted": 0.3466666666666667
+   },
+   "random@10": {
+    "mean_regret": 1.2229937950223386,
+    "frac_within_5pct": 0.14666666666666667,
+    "mean_wasted": 0.6733333333333333
+   },
+   "tpe@10": {
+    "mean_regret": 1.1332992231068335,
+    "frac_within_5pct": 0.24333333333333335,
+    "mean_wasted": 1.0433333333333332
+   },
+   "surrogate@10": {
+    "mean_regret": 1.145600231416728,
+    "frac_within_5pct": 0.21666666666666667,
+    "mean_wasted": 2.3566666666666665
+   },
+   "random@20": {
+    "mean_regret": 1.1013455787406028,
+    "frac_within_5pct": 0.3,
+    "mean_wasted": 1.4333333333333333
+   },
+   "tpe@20": {
+    "mean_regret": 1.0410090518945834,
+    "frac_within_5pct": 0.6166666666666667,
+    "mean_wasted": 2.5166666666666666
+   },
+   "surrogate@20": {
+    "mean_regret": 1.0147126929952626,
+    "frac_within_5pct": 0.8566666666666667,
+    "mean_wasted": 3.736666666666667
+   },
+   "random@40": {
+    "mean_regret": 1.0453009520070746,
+    "frac_within_5pct": 0.53,
+    "mean_wasted": 2.87
+   },
+   "tpe@40": {
+    "mean_regret": 1.0065507125843978,
+    "frac_within_5pct": 0.9766666666666667,
+    "mean_wasted": 4.986666666666666
+   },
+   "surrogate@40": {
+    "mean_regret": 1.0000708463868793,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 5.886666666666667
+   },
+   "random@60": {
+    "mean_regret": 1.0244846413010615,
+    "frac_within_5pct": 0.7,
+    "mean_wasted": 4.29
+   },
+   "tpe@60": {
+    "mean_regret": 1.001912852445736,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 7.31
+   },
+   "surrogate@60": {
+    "mean_regret": 1.0,
+    "frac_within_5pct": 1.0,
+    "mean_wasted": 6.76
+   }
+  }
+ }
+}
