@@ -119,13 +119,24 @@ def fig_regret():
         ("NVIDIA L4", "L4 — smooth, failure-free"),
     ]
     budgets = [5, 10, 20, 40, 60]
+    def wilson(p, n=300, z=1.96):
+        den = 1 + z * z / n
+        center = (p + z * z / (2 * n)) / den
+        half = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / den
+        return center - half, center + half
+
     fig, axes = plt.subplots(2, 2, figsize=(6.9, 4.6), sharex=True,
                              sharey=True)
     for ax, (dev, title) in zip(axes.flat, panels):
         for strat, style in STRATEGY_STYLE.items():
-            ys = [100 * data[dev][f"{strat}@{b}"]["frac_within_5pct"]
+            ps = [data[dev][f"{strat}@{b}"]["frac_within_5pct"]
                   for b in budgets]
+            ys = [100 * p for p in ps]
+            los = [100 * wilson(p)[0] for p in ps]
+            his = [100 * wilson(p)[1] for p in ps]
             ax.plot(budgets, ys, lw=1.4, ms=3.5, **style)
+            ax.fill_between(budgets, los, his, color=style["color"],
+                            alpha=0.15, lw=0)
         ax.set_title(title)
         ax.set_xscale("log")
         ax.set_xticks(budgets)
@@ -217,10 +228,10 @@ def fig_warmstart():
                                     [r["axes"] for r in ranked])
 
     fig, ax = plt.subplots(figsize=(3.7, 3.1))
-    vmin, vmax = 1.0, 1.17
-    im = ax.imshow([[v if not math.isnan(v) else vmin for v in row]
-                    for row in mat],
-                   cmap="RdYlGn_r", vmin=vmin, vmax=vmax)
+    lim = 0.15
+    delta = [[(mat[i][j] - cold[i]) if not math.isnan(mat[i][j]) else 0.0
+              for j in range(n)] for i in range(n)]
+    im = ax.imshow(delta, cmap="RdBu_r", vmin=-lim, vmax=lim)
     for i in range(n):
         for j in range(n):
             if i == j:
@@ -229,11 +240,10 @@ def fig_warmstart():
                 ax.text(j, i, f"cold\n{cold[i]:.3f}", ha="center",
                         va="center", fontsize=6, color="#555555")
             else:
-                v = mat[i][j]
-                poison = v > cold[i] + 1e-9
-                ax.text(j, i, f"{v:.3f}", ha="center", va="center",
+                v = delta[i][j]
+                ax.text(j, i, f"{v:+.3f}", ha="center", va="center",
                         fontsize=6.5,
-                        fontweight="bold" if poison else "normal")
+                        fontweight="bold" if v > 1e-9 else "normal")
     labels = [l for l, _ in lands]
     ax.set_xticks(range(n)); ax.set_xticklabels(labels, rotation=45,
                                                 ha="right")
@@ -241,7 +251,7 @@ def fig_warmstart():
     ax.set_xlabel("warm-start source (its top-5 configs)")
     ax.set_ylabel("target device")
     cbar = fig.colorbar(im, ax=ax, fraction=0.046, pad=0.03)
-    cbar.set_label("mean regret at $B{=}20$", fontsize=7)
+    cbar.set_label("warm $-$ cold mean regret at $B{=}20$", fontsize=7)
     fig.tight_layout()
     fig.savefig(f"{OUT}/fig-warmstart.pdf")
     plt.close(fig)
