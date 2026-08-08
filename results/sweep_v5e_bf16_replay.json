@@ -1,0 +1,80 @@
+{
+ "device": "TPU v5 lite",
+ "oracle_ms": 0.9761500000422529,
+ "n_configs": 125,
+ "n_failures": 29,
+ "seeds": 300,
+ "gamma": 0.3,
+ "summary": {
+  "random@5": {
+   "mean_regret": 1.2922848069906385,
+   "p90_regret": 1.869599959121141,
+   "frac_within_5pct": 0.18729096989966554,
+   "mean_wasted": 1.2675585284280937,
+   "all_failed_runs": 1
+  },
+  "tpe@5": {
+   "mean_regret": 1.2922848069906385,
+   "p90_regret": 1.869599959121141,
+   "frac_within_5pct": 0.18729096989966554,
+   "mean_wasted": 1.2675585284280937,
+   "all_failed_runs": 1
+  },
+  "random@10": {
+   "mean_regret": 1.1223882155849254,
+   "p90_regret": 1.300373918041556,
+   "frac_within_5pct": 0.33666666666666667,
+   "mean_wasted": 2.43,
+   "all_failed_runs": 0
+  },
+  "tpe@10": {
+   "mean_regret": 1.0913575543044618,
+   "p90_regret": 1.2361522307526596,
+   "frac_within_5pct": 0.54,
+   "mean_wasted": 2.566666666666667,
+   "all_failed_runs": 0
+  },
+  "random@20": {
+   "mean_regret": 1.052136741244035,
+   "p90_regret": 1.1147928085235101,
+   "frac_within_5pct": 0.6333333333333333,
+   "mean_wasted": 4.803333333333334,
+   "all_failed_runs": 0
+  },
+  "tpe@20": {
+   "mean_regret": 1.025116687969137,
+   "p90_regret": 1.0447016338435722,
+   "frac_within_5pct": 0.92,
+   "mean_wasted": 5.496666666666667,
+   "all_failed_runs": 0
+  },
+  "random@40": {
+   "mean_regret": 1.0206369410271887,
+   "p90_regret": 1.0447016338435722,
+   "frac_within_5pct": 0.9166666666666666,
+   "mean_wasted": 9.363333333333333,
+   "all_failed_runs": 0
+  },
+  "tpe@40": {
+   "mean_regret": 1.006093274613123,
+   "p90_regret": 1.0145674334257646,
+   "frac_within_5pct": 1.0,
+   "mean_wasted": 11.42,
+   "all_failed_runs": 0
+  },
+  "random@60": {
+   "mean_regret": 1.011422001390343,
+   "p90_regret": 1.0273369868745947,
+   "frac_within_5pct": 0.9866666666666667,
+   "mean_wasted": 13.896666666666667,
+   "all_failed_runs": 0
+  },
+  "tpe@60": {
+   "mean_regret": 1.000235551229902,
+   "p90_regret": 1.0,
+   "frac_within_5pct": 1.0,
+   "mean_wasted": 17.363333333333333,
+   "all_failed_runs": 0
+  }
+ }
+}

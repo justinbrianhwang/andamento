@@ -18,7 +18,9 @@ configuration space on every accelerator Colab offers.
 | NVIDIA RTX PRO 6000 Blackwell Server Edition | Triton (GPU) | bf16 | 0.459 ms | `128x128x32` w4s3 0.496 ms | 0.93x | 58.7x | 2/8 | 0/8 |
 | NVIDIA RTX PRO 6000 Blackwell Server Edition | Triton (GPU) | fp16 | 0.455 ms | `128x128x32` w4s3 0.499 ms | 0.91x | 58.4x | 2/8 | 0/8 |
 | TPU v5 lite | Mosaic (TPU) | bf16 | 0.933 ms | `1024x1024x512` 0.969 ms | 0.96x | 12.0x | 2/5 | 1/6 |
+| TPU v5 lite | Mosaic (TPU) | bf16 | 0.961 ms | `512x1024x1024` 0.976 ms | 0.98x | 12.1x | 39/96 | 29/125 |
 | TPU v6 lite | Mosaic (TPU) | bf16 | 0.338 ms | `512x1024x1024` 0.501 ms | 0.67x | 28.5x | 2/5 | 1/6 |
+| TPU v6 lite | Mosaic (TPU) | bf16 | 0.345 ms | `2048x512x1024` 0.385 ms | 0.90x | 37.0x | 72/116 | 9/125 |
 
 ## How bad configurations announce themselves
 
@@ -39,6 +41,12 @@ autotuner can prune for free.
 - **NVIDIA RTX PRO 6000 Blackwell Server Edition (fp16)**: `256x256x64` compiles cleanly and then runs 58x slower than the best config (29.1 ms vs 0.499 ms) — no error, no warning.
 - **TPU v5 lite (bf16)**: `128x128x128` compiles cleanly and then runs 12x slower than the best config (11.7 ms vs 0.969 ms) — no error, no warning.
 - **TPU v5 lite (bf16)**: `2048x2048x512` refuses to compile — `JaxRuntimeError: RESOURCE_EXHAUSTED: E1001: CompileTimeScopedVmemOom: Ran out of memory in memory sp`
+- **TPU v5 lite (bf16)**: `128x128x128` compiles cleanly and then runs 12x slower than the best config (11.8 ms vs 0.976 ms) — no error, no warning.
+- **TPU v5 lite (bf16)**: `128x2048x2048` refuses to compile — `JaxRuntimeError: RESOURCE_EXHAUSTED: E1001: CompileTimeScopedVmemOom:
+Ran out of memory in memory sp`
 - **TPU v6 lite (bf16)**: `128x128x128` compiles cleanly and then runs 28x slower than the best config (14.3 ms vs 0.501 ms) — no error, no warning.
 - **TPU v6 lite (bf16)**: `2048x2048x512` refuses to compile — `JaxRuntimeError: RESOURCE_EXHAUSTED: E1001: CompileTimeScopedVmemOom:
+Ran out of memory in memory sp`
+- **TPU v6 lite (bf16)**: `128x128x128` compiles cleanly and then runs 37x slower than the best config (14.2 ms vs 0.385 ms) — no error, no warning.
+- **TPU v6 lite (bf16)**: `1024x2048x2048` refuses to compile — `JaxRuntimeError: RESOURCE_EXHAUSTED: E1001: CompileTimeScopedVmemOom:
 Ran out of memory in memory sp`
