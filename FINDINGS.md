@@ -27,7 +27,11 @@ configuration space on every accelerator Colab offers.
 | NVIDIA B200 | Triton (GPU) | bf16 | 0.433 ms | `128x128x64` w4s2 0.895 ms | 0.48x | 6.0x | 18/78 | 0/78 |
 | NVIDIA GeForce GTX 1060 6GB | Triton (GPU) | bf16 | 44.024 ms | none compiled | — | — | — | 0/0 |
 | NVIDIA GeForce RTX 2080 Ti | Triton (GPU) | bf16 | 14.817 ms | none compiled | — | — | — | 0/0 |
+| NVIDIA GeForce RTX 3090 | Triton (GPU) | bf16 | 1.857 ms | `128x128x64` w8s2 2.141 ms | 0.87x | 38.5x | 22/63 | 15/78 |
+| NVIDIA GeForce RTX 4060 Laptop GPU | Triton (GPU) | bf16 | 5.613 ms | `128x64x32` w4s4 6.404 ms | 0.88x | 21.9x | 26/63 | 15/78 |
+| NVIDIA GeForce RTX 4090 | Triton (GPU) | bf16 | 1.082 ms | `128x64x32` w4s2 0.927 ms | 1.17x | 4.2x | 12/54 | 24/78 |
 | NVIDIA GeForce RTX 5090 | Triton (GPU) | bf16 | 2.203 ms | none compiled | — | — | — | 78/78 |
+| NVIDIA GeForce RTX 5090 | Triton (GPU) | bf16 | 0.713 ms | `64x128x32` w4s3 0.700 ms | 1.02x | 3.5x | 9/54 | 24/78 |
 
 ## How bad configurations announce themselves
 
@@ -61,4 +65,12 @@ Ran out of memory in memory sp`
 - **TPU v6 lite (bf16)**: `1024x2048x2048` refuses to compile — `JaxRuntimeError: RESOURCE_EXHAUSTED: E1001: CompileTimeScopedVmemOom:
 Ran out of memory in memory sp`
 - **NVIDIA B200 (bf16)**: `256x256x32` compiles cleanly and then runs 6x slower than the best config (5.4 ms vs 0.895 ms) — no error, no warning.
+- **NVIDIA GeForce RTX 3090 (bf16)**: `128x256x32` compiles cleanly and then runs 39x slower than the best config (82.5 ms vs 2.141 ms) — no error, no warning.
+- **NVIDIA GeForce RTX 3090 (bf16)**: `256x128x64` refuses to compile — `XlaRuntimeError: RESOURCE_EXHAUSTED: Failed to launch CUDA kernel: matmul_kernel__1; block dims: 128`
+- **NVIDIA GeForce RTX 4060 Laptop GPU (bf16)**: `128x256x32` compiles cleanly and then runs 22x slower than the best config (140.2 ms vs 6.404 ms) — no error, no warning.
+- **NVIDIA GeForce RTX 4060 Laptop GPU (bf16)**: `256x128x32` refuses to compile — `XlaRuntimeError: RESOURCE_EXHAUSTED: Failed to launch CUDA kernel: matmul_kernel__1; block dims: 128`
+- **NVIDIA GeForce RTX 4090 (bf16)**: `32x32x32` compiles cleanly and then runs 4x slower than the best config (3.9 ms vs 0.927 ms) — no error, no warning.
+- **NVIDIA GeForce RTX 4090 (bf16)**: `128x256x32` refuses to compile — `XlaRuntimeError: RESOURCE_EXHAUSTED: Failed to launch CUDA kernel: matmul_kernel__1; block dims: 128`
 - **NVIDIA GeForce RTX 5090 (bf16)**: no configuration compiled. `RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.shardi`
+- **NVIDIA GeForce RTX 5090 (bf16)**: `32x32x32` compiles cleanly and then runs 4x slower than the best config (2.5 ms vs 0.700 ms) — no error, no warning.
+- **NVIDIA GeForce RTX 5090 (bf16)**: `128x256x32` refuses to compile — `XlaRuntimeError: RESOURCE_EXHAUSTED: Failed to launch CUDA kernel: matmul_kernel__1; block dims: 128`

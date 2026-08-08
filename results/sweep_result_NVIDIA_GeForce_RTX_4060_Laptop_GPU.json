@@ -1,0 +1,2075 @@
+{
+ "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+ "jax": "0.6.2",
+ "properties": {
+  "smem_per_block": 101376,
+  "smem_per_sm": 1,
+  "max_threads_per_sm": 1536,
+  "sm_count": 24,
+  "compute_capability": [
+   8,
+   9
+  ]
+ },
+ "shape": [
+  4096,
+  4096,
+  4096
+ ],
+ "sweeps": [
+  {
+   "dtype": "bf16",
+   "xla_ms": 5.612871000039377,
+   "status": "ok",
+   "results": [
+    {
+     "config": [
+      32,
+      32,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 8192,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.08080808080808081,
+      "threads": 128,
+      "tile_elems": 1024,
+      "operand_elems": 2048,
+      "accum_bytes": 4096,
+      "arithmetic_intensity": 8.0,
+      "elems_per_thread": 8.0
+     },
+     "status": "ok",
+     "median_ms": 13.932341999975506,
+     "iqr_ms": 1.5623360001200126,
+     "compile_s": 15.230580810999982,
+     "tflops": 9.864741582731863,
+     "vs_xla": 0.4028662948447034,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      32,
+      32,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 12288,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.12121212121212122,
+      "threads": 128,
+      "tile_elems": 1024,
+      "operand_elems": 2048,
+      "accum_bytes": 4096,
+      "arithmetic_intensity": 8.0,
+      "elems_per_thread": 8.0
+     },
+     "status": "ok",
+     "median_ms": 14.26898950001032,
+     "iqr_ms": 1.783063499999571,
+     "compile_s": 15.339260637999814,
+     "tflops": 9.632003266377103,
+     "vs_xla": 0.39336149206888943,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      32,
+      32,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 16384,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.16161616161616163,
+      "threads": 128,
+      "tile_elems": 1024,
+      "operand_elems": 2048,
+      "accum_bytes": 4096,
+      "arithmetic_intensity": 8.0,
+      "elems_per_thread": 8.0
+     },
+     "status": "ok",
+     "median_ms": 13.892686499957563,
+     "iqr_ms": 0.6400597500260119,
+     "compile_s": 15.400705163999874,
+     "tflops": 9.892899654247566,
+     "vs_xla": 0.40401624265087405,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      32,
+      32,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 8192,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.08080808080808081,
+      "threads": 256,
+      "tile_elems": 1024,
+      "operand_elems": 2048,
+      "accum_bytes": 4096,
+      "arithmetic_intensity": 8.0,
+      "elems_per_thread": 4.0
+     },
+     "status": "ok",
+     "median_ms": 25.238240500016218,
+     "iqr_ms": 0.42766525007209566,
+     "compile_s": 15.330559805999883,
+     "tflops": 5.445663039462346,
+     "vs_xla": 0.2223954954401742,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      32,
+      32,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 12288,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.12121212121212122,
+      "threads": 256,
+      "tile_elems": 1024,
+      "operand_elems": 2048,
+      "accum_bytes": 4096,
+      "arithmetic_intensity": 8.0,
+      "elems_per_thread": 4.0
+     },
+     "status": "ok",
+     "median_ms": 25.171893999981876,
+     "iqr_ms": 0.44107724994546516,
+     "compile_s": 15.31027556700019,
+     "tflops": 5.460016376681824,
+     "vs_xla": 0.22298167154380272,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      32,
+      32,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 16384,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.16161616161616163,
+      "threads": 256,
+      "tile_elems": 1024,
+      "operand_elems": 2048,
+      "accum_bytes": 4096,
+      "arithmetic_intensity": 8.0,
+      "elems_per_thread": 4.0
+     },
+     "status": "ok",
+     "median_ms": 25.252672000078746,
+     "iqr_ms": 0.4325960000528539,
+     "compile_s": 15.467335787000138,
+     "tflops": 5.442550929722266,
+     "vs_xla": 0.22226839995474038,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      64,
+      64,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 16384,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.16161616161616163,
+      "threads": 128,
+      "tile_elems": 4096,
+      "operand_elems": 4096,
+      "accum_bytes": 16384,
+      "arithmetic_intensity": 16.0,
+      "elems_per_thread": 32.0
+     },
+     "status": "ok",
+     "median_ms": 6.874739000068075,
+     "iqr_ms": 0.6740407501979462,
+     "compile_s": 16.77474225700007,
+     "tflops": 19.99187946926262,
+     "vs_xla": 0.8164485953552268,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      64,
+      64,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 24576,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.24242424242424243,
+      "threads": 128,
+      "tile_elems": 4096,
+      "operand_elems": 4096,
+      "accum_bytes": 16384,
+      "arithmetic_intensity": 16.0,
+      "elems_per_thread": 32.0
+     },
+     "status": "ok",
+     "median_ms": 7.105445499973939,
+     "iqr_ms": 0.13771399989082056,
+     "compile_s": 16.59903611499999,
+     "tflops": 19.342763725723334,
+     "vs_xla": 0.7899393500463783,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      64,
+      64,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 32768,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.32323232323232326,
+      "threads": 128,
+      "tile_elems": 4096,
+      "operand_elems": 4096,
+      "accum_bytes": 16384,
+      "arithmetic_intensity": 16.0,
+      "elems_per_thread": 32.0
+     },
+     "status": "ok",
+     "median_ms": 7.114500000056978,
+     "iqr_ms": 0.2878395000038836,
+     "compile_s": 16.63455245399996,
+     "tflops": 19.318146527640632,
+     "vs_xla": 0.7889340080110232,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      64,
+      64,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 16384,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.16161616161616163,
+      "threads": 256,
+      "tile_elems": 4096,
+      "operand_elems": 4096,
+      "accum_bytes": 16384,
+      "arithmetic_intensity": 16.0,
+      "elems_per_thread": 16.0
+     },
+     "status": "ok",
+     "median_ms": 13.2901199999651,
+     "iqr_ms": 0.4231489999142468,
+     "compile_s": 16.291494217000036,
+     "tflops": 10.34143811134594,
+     "vs_xla": 0.42233410985409586,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      64,
+      64,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 24576,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.24242424242424243,
+      "threads": 256,
+      "tile_elems": 4096,
+      "operand_elems": 4096,
+      "accum_bytes": 16384,
+      "arithmetic_intensity": 16.0,
+      "elems_per_thread": 16.0
+     },
+     "status": "ok",
+     "median_ms": 13.538969999899564,
+     "iqr_ms": 0.4316810000659643,
+     "compile_s": 16.16905752399998,
+     "tflops": 10.151359628761979,
+     "vs_xla": 0.4145714925198161,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      64,
+      64,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 32768,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.32323232323232326,
+      "threads": 256,
+      "tile_elems": 4096,
+      "operand_elems": 4096,
+      "accum_bytes": 16384,
+      "arithmetic_intensity": 16.0,
+      "elems_per_thread": 16.0
+     },
+     "status": "ok",
+     "median_ms": 13.717474500026583,
+     "iqr_ms": 0.10130775001471193,
+     "compile_s": 16.155319985000006,
+     "tflops": 10.01926072264495,
+     "vs_xla": 0.4091767037750644,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      64,
+      64,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 32768,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.32323232323232326,
+      "threads": 128,
+      "tile_elems": 4096,
+      "operand_elems": 8192,
+      "accum_bytes": 16384,
+      "arithmetic_intensity": 16.0,
+      "elems_per_thread": 32.0
+     },
+     "status": "ok",
+     "median_ms": 6.8773085000657375,
+     "iqr_ms": 0.17117999988158772,
+     "compile_s": 4.190095911000071,
+     "tflops": 19.98441010326733,
+     "vs_xla": 0.8161435538315208,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      64,
+      64,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 49152,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.48484848484848486,
+      "threads": 128,
+      "tile_elems": 4096,
+      "operand_elems": 8192,
+      "accum_bytes": 16384,
+      "arithmetic_intensity": 16.0,
+      "elems_per_thread": 32.0
+     },
+     "status": "ok",
+     "median_ms": 6.814265499997418,
+     "iqr_ms": 0.11987175003014272,
+     "compile_s": 4.175630633999845,
+     "tflops": 20.169298286374676,
+     "vs_xla": 0.8236942044658376,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      64,
+      64,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 65536,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.6464646464646465,
+      "threads": 128,
+      "tile_elems": 4096,
+      "operand_elems": 8192,
+      "accum_bytes": 16384,
+      "arithmetic_intensity": 16.0,
+      "elems_per_thread": 32.0
+     },
+     "status": "ok",
+     "median_ms": 7.076750500004891,
+     "iqr_ms": 0.159620500028268,
+     "compile_s": 4.19970449099992,
+     "tflops": 19.421195288982563,
+     "vs_xla": 0.7931424175595136,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      64,
+      64,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 32768,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.32323232323232326,
+      "threads": 256,
+      "tile_elems": 4096,
+      "operand_elems": 8192,
+      "accum_bytes": 16384,
+      "arithmetic_intensity": 16.0,
+      "elems_per_thread": 16.0
+     },
+     "status": "ok",
+     "median_ms": 12.682631000075162,
+     "iqr_ms": 0.1095287499879305,
+     "compile_s": 3.9151294559999315,
+     "tflops": 10.836785637868475,
+     "vs_xla": 0.4425636131813748,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      64,
+      64,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 49152,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.48484848484848486,
+      "threads": 256,
+      "tile_elems": 4096,
+      "operand_elems": 8192,
+      "accum_bytes": 16384,
+      "arithmetic_intensity": 16.0,
+      "elems_per_thread": 16.0
+     },
+     "status": "ok",
+     "median_ms": 13.360575999968205,
+     "iqr_ms": 0.17072174989607447,
+     "compile_s": 4.2504620360000445,
+     "tflops": 10.286903309582392,
+     "vs_xla": 0.42010696245826035,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      64,
+      64,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 65536,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.6464646464646465,
+      "threads": 256,
+      "tile_elems": 4096,
+      "operand_elems": 8192,
+      "accum_bytes": 16384,
+      "arithmetic_intensity": 16.0,
+      "elems_per_thread": 16.0
+     },
+     "status": "ok",
+     "median_ms": 13.342047000037383,
+     "iqr_ms": 0.2541019998147931,
+     "compile_s": 3.8962861649999923,
+     "tflops": 10.301189425551785,
+     "vs_xla": 0.4206903933124842,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      64,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 24576,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.24242424242424243,
+      "threads": 128,
+      "tile_elems": 8192,
+      "operand_elems": 6144,
+      "accum_bytes": 32768,
+      "arithmetic_intensity": 21.333333333333332,
+      "elems_per_thread": 64.0
+     },
+     "status": "ok",
+     "median_ms": 6.952127499971539,
+     "iqr_ms": 0.20919249993767153,
+     "compile_s": 18.191321617000085,
+     "tflops": 19.76933729603818,
+     "vs_xla": 0.8073601929858673,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      64,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 36864,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.36363636363636365,
+      "threads": 128,
+      "tile_elems": 8192,
+      "operand_elems": 6144,
+      "accum_bytes": 32768,
+      "arithmetic_intensity": 21.333333333333332,
+      "elems_per_thread": 64.0
+     },
+     "status": "ok",
+     "median_ms": 6.979711499980112,
+     "iqr_ms": 0.21472225000707112,
+     "compile_s": 18.185086977999845,
+     "tflops": 19.69120836475714,
+     "vs_xla": 0.8041694846635666,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      64,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 49152,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.48484848484848486,
+      "threads": 128,
+      "tile_elems": 8192,
+      "operand_elems": 6144,
+      "accum_bytes": 32768,
+      "arithmetic_intensity": 21.333333333333332,
+      "elems_per_thread": 64.0
+     },
+     "status": "ok",
+     "median_ms": 6.403602499972294,
+     "iqr_ms": 0.07866050003713099,
+     "compile_s": 18.926389025000162,
+     "tflops": 21.46275529634993,
+     "vs_xla": 0.8765177101582525,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      64,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 24576,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.24242424242424243,
+      "threads": 256,
+      "tile_elems": 8192,
+      "operand_elems": 6144,
+      "accum_bytes": 32768,
+      "arithmetic_intensity": 21.333333333333332,
+      "elems_per_thread": 32.0
+     },
+     "status": "ok",
+     "median_ms": 7.78198150010212,
+     "iqr_ms": 0.15952549989606268,
+     "compile_s": 16.449863972000003,
+     "tflops": 17.661177101255824,
+     "vs_xla": 0.7212650145680405,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      64,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 36864,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.36363636363636365,
+      "threads": 256,
+      "tile_elems": 8192,
+      "operand_elems": 6144,
+      "accum_bytes": 32768,
+      "arithmetic_intensity": 21.333333333333332,
+      "elems_per_thread": 32.0
+     },
+     "status": "ok",
+     "median_ms": 7.729578999942532,
+     "iqr_ms": 0.1677632500332038,
+     "compile_s": 16.358934954000006,
+     "tflops": 17.780910638602933,
+     "vs_xla": 0.7261548138755173,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      64,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 49152,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.48484848484848486,
+      "threads": 256,
+      "tile_elems": 8192,
+      "operand_elems": 6144,
+      "accum_bytes": 32768,
+      "arithmetic_intensity": 21.333333333333332,
+      "elems_per_thread": 32.0
+     },
+     "status": "ok",
+     "median_ms": 7.683942999960891,
+     "iqr_ms": 0.17126024994240652,
+     "compile_s": 16.320767182000054,
+     "tflops": 17.88651392555873,
+     "vs_xla": 0.7304675477249043,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      64,
+      128,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 24576,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.24242424242424243,
+      "threads": 128,
+      "tile_elems": 8192,
+      "operand_elems": 6144,
+      "accum_bytes": 32768,
+      "arithmetic_intensity": 21.333333333333332,
+      "elems_per_thread": 64.0
+     },
+     "status": "ok",
+     "median_ms": 6.962727499967514,
+     "iqr_ms": 0.28036850028456684,
+     "compile_s": 18.21480955700008,
+     "tflops": 19.739240616933703,
+     "vs_xla": 0.8061310743621037,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      64,
+      128,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 36864,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.36363636363636365,
+      "threads": 128,
+      "tile_elems": 8192,
+      "operand_elems": 6144,
+      "accum_bytes": 32768,
+      "arithmetic_intensity": 21.333333333333332,
+      "elems_per_thread": 64.0
+     },
+     "status": "ok",
+     "median_ms": 6.7765245000828145,
+     "iqr_ms": 0.4307112496917398,
+     "compile_s": 18.210368781999932,
+     "tflops": 20.2816286534964,
+     "vs_xla": 0.8282816656194164,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      64,
+      128,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 49152,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.48484848484848486,
+      "threads": 128,
+      "tile_elems": 8192,
+      "operand_elems": 6144,
+      "accum_bytes": 32768,
+      "arithmetic_intensity": 21.333333333333332,
+      "elems_per_thread": 64.0
+     },
+     "status": "ok",
+     "median_ms": 6.610521500078903,
+     "iqr_ms": 0.2341457501415789,
+     "compile_s": 18.22323151699993,
+     "tflops": 20.79093963620866,
+     "vs_xla": 0.84908142269447,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      64,
+      128,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 24576,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.24242424242424243,
+      "threads": 256,
+      "tile_elems": 8192,
+      "operand_elems": 6144,
+      "accum_bytes": 32768,
+      "arithmetic_intensity": 21.333333333333332,
+      "elems_per_thread": 32.0
+     },
+     "status": "ok",
+     "median_ms": 7.213416500007952,
+     "iqr_ms": 0.31828999999561347,
+     "compile_s": 16.356854239999848,
+     "tflops": 19.053239678015053,
+     "vs_xla": 0.7781154741353405,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      64,
+      128,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 36864,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.36363636363636365,
+      "threads": 256,
+      "tile_elems": 8192,
+      "operand_elems": 6144,
+      "accum_bytes": 32768,
+      "arithmetic_intensity": 21.333333333333332,
+      "elems_per_thread": 32.0
+     },
+     "status": "ok",
+     "median_ms": 7.349615499833817,
+     "iqr_ms": 0.18786424993777473,
+     "compile_s": 16.371622291999756,
+     "tflops": 18.70015560339281,
+     "vs_xla": 0.7636958695548481,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      64,
+      128,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 49152,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.48484848484848486,
+      "threads": 256,
+      "tile_elems": 8192,
+      "operand_elems": 6144,
+      "accum_bytes": 32768,
+      "arithmetic_intensity": 21.333333333333332,
+      "elems_per_thread": 32.0
+     },
+     "status": "ok",
+     "median_ms": 6.820726500109231,
+     "iqr_ms": 0.01639649974549684,
+     "compile_s": 16.369188872999985,
+     "tflops": 20.150192720643318,
+     "vs_xla": 0.8229139520474086,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      128,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 32768,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.32323232323232326,
+      "threads": 128,
+      "tile_elems": 16384,
+      "operand_elems": 8192,
+      "accum_bytes": 65536,
+      "arithmetic_intensity": 32.0,
+      "elems_per_thread": 128.0
+     },
+     "status": "ok",
+     "median_ms": 6.9976120000774245,
+     "iqr_ms": 0.16884875049072434,
+     "compile_s": 22.493232444000114,
+     "tflops": 19.640836541162802,
+     "vs_xla": 0.8021123491810168,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      128,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 49152,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.48484848484848486,
+      "threads": 128,
+      "tile_elems": 16384,
+      "operand_elems": 8192,
+      "accum_bytes": 65536,
+      "arithmetic_intensity": 32.0,
+      "elems_per_thread": 128.0
+     },
+     "status": "ok",
+     "median_ms": 6.9902449999972305,
+     "iqr_ms": 0.1940949999834629,
+     "compile_s": 22.56040291499994,
+     "tflops": 19.661535965056228,
+     "vs_xla": 0.8029576931912401,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      128,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 65536,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.6464646464646465,
+      "threads": 128,
+      "tile_elems": 16384,
+      "operand_elems": 8192,
+      "accum_bytes": 65536,
+      "arithmetic_intensity": 32.0,
+      "elems_per_thread": 128.0
+     },
+     "status": "ok",
+     "median_ms": 6.5067255000030855,
+     "iqr_ms": 0.06264175021897245,
+     "compile_s": 22.800109902999793,
+     "tflops": 21.12259898960465,
+     "vs_xla": 0.8626260628386299,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      128,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 32768,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.32323232323232326,
+      "threads": 256,
+      "tile_elems": 16384,
+      "operand_elems": 8192,
+      "accum_bytes": 65536,
+      "arithmetic_intensity": 32.0,
+      "elems_per_thread": 64.0
+     },
+     "status": "ok",
+     "median_ms": 8.06342850000874,
+     "iqr_ms": 0.28652875016632606,
+     "compile_s": 18.693964730999596,
+     "tflops": 17.04472898492881,
+     "vs_xla": 0.6960898828622704,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      128,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 49152,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.48484848484848486,
+      "threads": 256,
+      "tile_elems": 16384,
+      "operand_elems": 8192,
+      "accum_bytes": 65536,
+      "arithmetic_intensity": 32.0,
+      "elems_per_thread": 64.0
+     },
+     "status": "ok",
+     "median_ms": 7.488768000030177,
+     "iqr_ms": 0.08149324980877282,
+     "compile_s": 18.495672585000193,
+     "tflops": 18.352678767915652,
+     "vs_xla": 0.7495052590782301,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      128,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 65536,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.6464646464646465,
+      "threads": 256,
+      "tile_elems": 16384,
+      "operand_elems": 8192,
+      "accum_bytes": 65536,
+      "arithmetic_intensity": 32.0,
+      "elems_per_thread": 64.0
+     },
+     "status": "ok",
+     "median_ms": 7.805258499956835,
+     "iqr_ms": 0.13654475037583325,
+     "compile_s": 20.785136960000273,
+     "tflops": 17.608507581492663,
+     "vs_xla": 0.7191140434452513,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      128,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 65536,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.6464646464646465,
+      "threads": 128,
+      "tile_elems": 16384,
+      "operand_elems": 16384,
+      "accum_bytes": 65536,
+      "arithmetic_intensity": 32.0,
+      "elems_per_thread": 128.0
+     },
+     "status": "ok",
+     "median_ms": 9.556442500070261,
+     "iqr_ms": 0.14682349979011633,
+     "compile_s": 13.967720826999994,
+     "tflops": 14.381811377088232,
+     "vs_xla": 0.5873389600783042,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      128,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 98304,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.9696969696969697,
+      "threads": 128,
+      "tile_elems": 16384,
+      "operand_elems": 16384,
+      "accum_bytes": 65536,
+      "arithmetic_intensity": 32.0,
+      "elems_per_thread": 128.0
+     },
+     "status": "ok",
+     "median_ms": 8.927330500000608,
+     "iqr_ms": 0.7456925001179115,
+     "compile_s": 13.879087207000339,
+     "tflops": 15.395302489584164,
+     "vs_xla": 0.6287289352667065,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      128,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 131072,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.292929292929293,
+      "threads": 128,
+      "tile_elems": 16384,
+      "operand_elems": 16384,
+      "accum_bytes": 65536,
+      "arithmetic_intensity": 32.0,
+      "elems_per_thread": 128.0
+     },
+     "status": "ok",
+     "median_ms": 9.43858799996633,
+     "iqr_ms": 0.24867174988685292,
+     "compile_s": 13.839096686000175,
+     "tflops": 14.561389211234802,
+     "vs_xla": 0.594672741310395,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      128,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 65536,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.6464646464646465,
+      "threads": 256,
+      "tile_elems": 16384,
+      "operand_elems": 16384,
+      "accum_bytes": 65536,
+      "arithmetic_intensity": 32.0,
+      "elems_per_thread": 64.0
+     },
+     "status": "ok",
+     "median_ms": 7.0245169999907375,
+     "iqr_ms": 0.33484925018001377,
+     "compile_s": 6.817557416,
+     "tflops": 19.56560906211505,
+     "vs_xla": 0.7990401332998095,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      128,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 98304,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.9696969696969697,
+      "threads": 256,
+      "tile_elems": 16384,
+      "operand_elems": 16384,
+      "accum_bytes": 65536,
+      "arithmetic_intensity": 32.0,
+      "elems_per_thread": 64.0
+     },
+     "status": "ok",
+     "median_ms": 7.300736999923174,
+     "iqr_ms": 0.15768224966450362,
+     "compile_s": 6.878750284000034,
+     "tflops": 18.825353313432093,
+     "vs_xla": 0.7688088202736848,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      128,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 131072,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.292929292929293,
+      "threads": 256,
+      "tile_elems": 16384,
+      "operand_elems": 16384,
+      "accum_bytes": 65536,
+      "arithmetic_intensity": 32.0,
+      "elems_per_thread": 64.0
+     },
+     "status": "ok",
+     "median_ms": 7.443183999839675,
+     "iqr_ms": 0.183108500095841,
+     "compile_s": 6.816639330000271,
+     "tflops": 18.46507535954511,
+     "vs_xla": 0.7540954247752409,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      256,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 49152,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.48484848484848486,
+      "threads": 128,
+      "tile_elems": 32768,
+      "operand_elems": 12288,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 256.0
+     },
+     "status": "ok",
+     "median_ms": 140.17610249993595,
+     "iqr_ms": 0.4695917501749136,
+     "compile_s": 89.91139438299979,
+     "tflops": 0.9804734974141744,
+     "vs_xla": 0.040041568426700556,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      256,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 73728,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.7272727272727273,
+      "threads": 128,
+      "tile_elems": 32768,
+      "operand_elems": 12288,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 256.0
+     },
+     "status": "ok",
+     "median_ms": 140.0129300000117,
+     "iqr_ms": 0.39532124992547324,
+     "compile_s": 90.27046321399985,
+     "tflops": 0.9816161512510918,
+     "vs_xla": 0.04008823327987571,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      256,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 98304,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.9696969696969697,
+      "threads": 128,
+      "tile_elems": 32768,
+      "operand_elems": 12288,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 256.0
+     },
+     "status": "ok",
+     "median_ms": 140.2113020003526,
+     "iqr_ms": 0.7087005000130375,
+     "compile_s": 89.75245951099987,
+     "tflops": 0.9802273533673797,
+     "vs_xla": 0.04003151614714527,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      256,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 49152,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.48484848484848486,
+      "threads": 256,
+      "tile_elems": 32768,
+      "operand_elems": 12288,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 128.0
+     },
+     "status": "ok",
+     "median_ms": 7.487086000082854,
+     "iqr_ms": 0.10897800007114711,
+     "compile_s": 21.09216070499997,
+     "tflops": 18.35680176112296,
+     "vs_xla": 0.7496736380451972,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      256,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 73728,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.7272727272727273,
+      "threads": 256,
+      "tile_elems": 32768,
+      "operand_elems": 12288,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 128.0
+     },
+     "status": "ok",
+     "median_ms": 7.374869499926717,
+     "iqr_ms": 0.24040574976424978,
+     "compile_s": 21.391156222000063,
+     "tflops": 18.63612006603855,
+     "vs_xla": 0.7610807215090587,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      256,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 98304,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.9696969696969697,
+      "threads": 256,
+      "tile_elems": 32768,
+      "operand_elems": 12288,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 128.0
+     },
+     "status": "ok",
+     "median_ms": 7.352605000050971,
+     "iqr_ms": 0.2709067503019469,
+     "compile_s": 21.147861753000143,
+     "tflops": 18.692552295553376,
+     "vs_xla": 0.7633853579786302,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      256,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 98304,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.9696969696969697,
+      "threads": 128,
+      "tile_elems": 32768,
+      "operand_elems": 24576,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 256.0
+     },
+     "status": "ok",
+     "median_ms": 113.19482549993154,
+     "iqr_ms": 0.48941124987322837,
+     "compile_s": 107.13900050800021,
+     "tflops": 1.214180532237166,
+     "vs_xla": 0.0495859327071693,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      256,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 147456,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.4545454545454546,
+      "threads": 128,
+      "tile_elems": 32768,
+      "operand_elems": 24576,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 256.0
+     },
+     "status": "ok",
+     "median_ms": 112.9462884998702,
+     "iqr_ms": 0.8800599996448,
+     "compile_s": 107.11470241699999,
+     "tflops": 1.2168523224395986,
+     "vs_xla": 0.049695045977945766,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      256,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 196608,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.9393939393939394,
+      "threads": 128,
+      "tile_elems": 32768,
+      "operand_elems": 24576,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 256.0
+     },
+     "status": "ok",
+     "median_ms": 113.50785399986307,
+     "iqr_ms": 0.6921585004420194,
+     "compile_s": 106.73890342100003,
+     "tflops": 1.2108321021747606,
+     "vs_xla": 0.049449186133376705,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      256,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 98304,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.9696969696969697,
+      "threads": 256,
+      "tile_elems": 32768,
+      "operand_elems": 24576,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 128.0
+     },
+     "status": "ok",
+     "median_ms": 12.931253000033394,
+     "iqr_ms": 2.0355219999146357,
+     "compile_s": 11.859995535000053,
+     "tflops": 10.62843279546422,
+     "vs_xla": 0.43405468905641875,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      256,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 147456,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.4545454545454546,
+      "threads": 256,
+      "tile_elems": 32768,
+      "operand_elems": 24576,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 128.0
+     },
+     "status": "ok",
+     "median_ms": 13.399434500115603,
+     "iqr_ms": 1.2816189996556204,
+     "compile_s": 11.83324473399989,
+     "tflops": 10.257071182430442,
+     "vs_xla": 0.41888864787472574,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      128,
+      256,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 196608,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.9393939393939394,
+      "threads": 256,
+      "tile_elems": 32768,
+      "operand_elems": 24576,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 128.0
+     },
+     "status": "ok",
+     "median_ms": 12.892391999912434,
+     "iqr_ms": 2.354477000267252,
+     "compile_s": 12.50890346899996,
+     "tflops": 10.660469637669525,
+     "vs_xla": 0.43536304202334986,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      256,
+      128,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 49152,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.48484848484848486,
+      "threads": 128,
+      "tile_elems": 32768,
+      "operand_elems": 12288,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 256.0
+     },
+     "status": "fail",
+     "failure_class": "launch_resources",
+     "error": "XlaRuntimeError: RESOURCE_EXHAUSTED: Failed to launch CUDA kernel: matmul_kernel__1; block dims: 128x1x1; grid dims: 16x32x1; shared memory size: 24576: CUDA_ERROR_OUT_OF_MEMORY: out of memory"
+    },
+    {
+     "config": [
+      256,
+      128,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 73728,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.7272727272727273,
+      "threads": 128,
+      "tile_elems": 32768,
+      "operand_elems": 12288,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 256.0
+     },
+     "status": "fail",
+     "failure_class": "launch_resources",
+     "error": "XlaRuntimeError: RESOURCE_EXHAUSTED: Failed to launch CUDA kernel: matmul_kernel__1; block dims: 128x1x1; grid dims: 16x32x1; shared memory size: 24576: CUDA_ERROR_OUT_OF_MEMORY: out of memory"
+    },
+    {
+     "config": [
+      256,
+      128,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 98304,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.9696969696969697,
+      "threads": 128,
+      "tile_elems": 32768,
+      "operand_elems": 12288,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 256.0
+     },
+     "status": "fail",
+     "failure_class": "launch_resources",
+     "error": "XlaRuntimeError: RESOURCE_EXHAUSTED: Failed to launch CUDA kernel: matmul_kernel__1; block dims: 128x1x1; grid dims: 16x32x1; shared memory size: 24576: CUDA_ERROR_OUT_OF_MEMORY: out of memory"
+    },
+    {
+     "config": [
+      256,
+      128,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 49152,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.48484848484848486,
+      "threads": 256,
+      "tile_elems": 32768,
+      "operand_elems": 12288,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 128.0
+     },
+     "status": "ok",
+     "median_ms": 6.910571999696913,
+     "iqr_ms": 0.058116749869441264,
+     "compile_s": 21.905946287999996,
+     "tflops": 19.888216703049743,
+     "vs_xla": 0.8122151104547567,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      256,
+      128,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 73728,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.7272727272727273,
+      "threads": 256,
+      "tile_elems": 32768,
+      "operand_elems": 12288,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 128.0
+     },
+     "status": "ok",
+     "median_ms": 7.357788999797776,
+     "iqr_ms": 0.1478064997399997,
+     "compile_s": 22.119055289000244,
+     "tflops": 18.67938228125017,
+     "vs_xla": 0.762847507613176,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      256,
+      128,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 98304,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.9696969696969697,
+      "threads": 256,
+      "tile_elems": 32768,
+      "operand_elems": 12288,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 128.0
+     },
+     "status": "ok",
+     "median_ms": 6.943743000192626,
+     "iqr_ms": 0.40855349971025134,
+     "compile_s": 23.912526265999986,
+     "tflops": 19.793208571830398,
+     "vs_xla": 0.8083350722922307,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      256,
+      128,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 98304,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.9696969696969697,
+      "threads": 128,
+      "tile_elems": 32768,
+      "operand_elems": 24576,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 256.0
+     },
+     "status": "ok",
+     "median_ms": 132.08596799995576,
+     "iqr_ms": 0.44384475029346504,
+     "compile_s": 111.44312593899986,
+     "tflops": 1.0405265264213837,
+     "vs_xla": 0.04249407476834524,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      256,
+      128,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 147456,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.4545454545454546,
+      "threads": 128,
+      "tile_elems": 32768,
+      "operand_elems": 24576,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 256.0
+     },
+     "status": "ok",
+     "median_ms": 132.17913649987167,
+     "iqr_ms": 0.8358364999594414,
+     "compile_s": 111.95582459800016,
+     "tflops": 1.0397930952751642,
+     "vs_xla": 0.042464122165337535,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      256,
+      128,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 196608,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.9393939393939394,
+      "threads": 128,
+      "tile_elems": 32768,
+      "operand_elems": 24576,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 256.0
+     },
+     "status": "ok",
+     "median_ms": 132.04061149986046,
+     "iqr_ms": 0.9593499995617094,
+     "compile_s": 111.8787137559998,
+     "tflops": 1.0408839516177584,
+     "vs_xla": 0.04250867166004687,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      256,
+      128,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 98304,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.9696969696969697,
+      "threads": 256,
+      "tile_elems": 32768,
+      "operand_elems": 24576,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 128.0
+     },
+     "status": "ok",
+     "median_ms": 13.774682500297786,
+     "iqr_ms": 1.616226000351162,
+     "compile_s": 13.05751035000003,
+     "tflops": 9.977649464445282,
+     "vs_xla": 0.40747734112332795,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      256,
+      128,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 147456,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.4545454545454546,
+      "threads": 256,
+      "tile_elems": 32768,
+      "operand_elems": 24576,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 128.0
+     },
+     "status": "ok",
+     "median_ms": 14.939733999881355,
+     "iqr_ms": 0.25197050047154335,
+     "compile_s": 12.954210366000098,
+     "tflops": 9.199558270119903,
+     "vs_xla": 0.3757008658978769,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      256,
+      128,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 196608,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.9393939393939394,
+      "threads": 256,
+      "tile_elems": 32768,
+      "operand_elems": 24576,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 128.0
+     },
+     "status": "ok",
+     "median_ms": 14.090203000023394,
+     "iqr_ms": 0.8896704999870053,
+     "compile_s": 13.041027757999927,
+     "tflops": 9.754220962733598,
+     "vs_xla": 0.3983527419746939,
+     "max_abs_err_vs_xla": 0.0
+    },
+    {
+     "config": [
+      256,
+      256,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 65536,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.6464646464646465,
+      "threads": 128,
+      "tile_elems": 65536,
+      "operand_elems": 16384,
+      "accum_bytes": 262144,
+      "arithmetic_intensity": 64.0,
+      "elems_per_thread": 512.0
+     },
+     "status": "fail",
+     "failure_class": "launch_resources",
+     "error": "XlaRuntimeError: RESOURCE_EXHAUSTED: Failed to launch CUDA kernel: matmul_kernel__1; block dims: 128x1x1; grid dims: 16x16x1; shared memory size: 33792: CUDA_ERROR_OUT_OF_MEMORY: out of memory"
+    },
+    {
+     "config": [
+      256,
+      256,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 98304,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.9696969696969697,
+      "threads": 128,
+      "tile_elems": 65536,
+      "operand_elems": 16384,
+      "accum_bytes": 262144,
+      "arithmetic_intensity": 64.0,
+      "elems_per_thread": 512.0
+     },
+     "status": "fail",
+     "failure_class": "launch_resources",
+     "error": "XlaRuntimeError: RESOURCE_EXHAUSTED: Failed to launch CUDA kernel: matmul_kernel__1; block dims: 128x1x1; grid dims: 16x16x1; shared memory size: 33792: CUDA_ERROR_OUT_OF_MEMORY: out of memory"
+    },
+    {
+     "config": [
+      256,
+      256,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 131072,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.292929292929293,
+      "threads": 128,
+      "tile_elems": 65536,
+      "operand_elems": 16384,
+      "accum_bytes": 262144,
+      "arithmetic_intensity": 64.0,
+      "elems_per_thread": 512.0
+     },
+     "status": "fail",
+     "failure_class": "launch_resources",
+     "error": "XlaRuntimeError: RESOURCE_EXHAUSTED: Failed to launch CUDA kernel: matmul_kernel__1; block dims: 128x1x1; grid dims: 16x16x1; shared memory size: 33792: CUDA_ERROR_OUT_OF_MEMORY: out of memory"
+    },
+    {
+     "config": [
+      256,
+      256,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 65536,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.6464646464646465,
+      "threads": 256,
+      "tile_elems": 65536,
+      "operand_elems": 16384,
+      "accum_bytes": 262144,
+      "arithmetic_intensity": 64.0,
+      "elems_per_thread": 256.0
+     },
+     "status": "fail",
+     "failure_class": "launch_resources",
+     "error": "XlaRuntimeError: RESOURCE_EXHAUSTED: Failed to launch CUDA kernel: matmul_kernel__1; block dims: 256x1x1; grid dims: 16x16x1; shared memory size: 67584: CUDA_ERROR_OUT_OF_MEMORY: out of memory"
+    },
+    {
+     "config": [
+      256,
+      256,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 98304,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.9696969696969697,
+      "threads": 256,
+      "tile_elems": 65536,
+      "operand_elems": 16384,
+      "accum_bytes": 262144,
+      "arithmetic_intensity": 64.0,
+      "elems_per_thread": 256.0
+     },
+     "status": "fail",
+     "failure_class": "launch_resources",
+     "error": "XlaRuntimeError: RESOURCE_EXHAUSTED: Failed to launch CUDA kernel: matmul_kernel__1; block dims: 256x1x1; grid dims: 16x16x1; shared memory size: 67584: CUDA_ERROR_OUT_OF_MEMORY: out of memory"
+    },
+    {
+     "config": [
+      256,
+      256,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 131072,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.292929292929293,
+      "threads": 256,
+      "tile_elems": 65536,
+      "operand_elems": 16384,
+      "accum_bytes": 262144,
+      "arithmetic_intensity": 64.0,
+      "elems_per_thread": 256.0
+     },
+     "status": "fail",
+     "failure_class": "launch_resources",
+     "error": "XlaRuntimeError: RESOURCE_EXHAUSTED: Failed to launch CUDA kernel: matmul_kernel__1; block dims: 256x1x1; grid dims: 16x16x1; shared memory size: 67584: CUDA_ERROR_OUT_OF_MEMORY: out of memory"
+    },
+    {
+     "config": [
+      256,
+      256,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 131072,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.292929292929293,
+      "threads": 128,
+      "tile_elems": 65536,
+      "operand_elems": 32768,
+      "accum_bytes": 262144,
+      "arithmetic_intensity": 64.0,
+      "elems_per_thread": 512.0
+     },
+     "status": "fail",
+     "failure_class": "launch_resources",
+     "error": "XlaRuntimeError: RESOURCE_EXHAUSTED: Failed to launch CUDA kernel: matmul_kernel__1; block dims: 128x1x1; grid dims: 16x16x1; shared memory size: 65536: CUDA_ERROR_OUT_OF_MEMORY: out of memory"
+    },
+    {
+     "config": [
+      256,
+      256,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 196608,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.9393939393939394,
+      "threads": 128,
+      "tile_elems": 65536,
+      "operand_elems": 32768,
+      "accum_bytes": 262144,
+      "arithmetic_intensity": 64.0,
+      "elems_per_thread": 512.0
+     },
+     "status": "fail",
+     "failure_class": "launch_resources",
+     "error": "XlaRuntimeError: RESOURCE_EXHAUSTED: Failed to launch CUDA kernel: matmul_kernel__1; block dims: 128x1x1; grid dims: 16x16x1; shared memory size: 65536: CUDA_ERROR_OUT_OF_MEMORY: out of memory"
+    },
+    {
+     "config": [
+      256,
+      256,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 262144,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 2.585858585858586,
+      "threads": 128,
+      "tile_elems": 65536,
+      "operand_elems": 32768,
+      "accum_bytes": 262144,
+      "arithmetic_intensity": 64.0,
+      "elems_per_thread": 512.0
+     },
+     "status": "fail",
+     "failure_class": "launch_resources",
+     "error": "XlaRuntimeError: RESOURCE_EXHAUSTED: Failed to launch CUDA kernel: matmul_kernel__1; block dims: 128x1x1; grid dims: 16x16x1; shared memory size: 65536: CUDA_ERROR_OUT_OF_MEMORY: out of memory"
+    },
+    {
+     "config": [
+      256,
+      256,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 131072,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.292929292929293,
+      "threads": 256,
+      "tile_elems": 65536,
+      "operand_elems": 32768,
+      "accum_bytes": 262144,
+      "arithmetic_intensity": 64.0,
+      "elems_per_thread": 256.0
+     },
+     "status": "fail",
+     "failure_class": "launch_resources",
+     "error": "XlaRuntimeError: RESOURCE_EXHAUSTED: Failed to launch CUDA kernel: matmul_kernel__1; block dims: 256x1x1; grid dims: 16x16x1; shared memory size: 67584: CUDA_ERROR_OUT_OF_MEMORY: out of memory"
+    },
+    {
+     "config": [
+      256,
+      256,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 196608,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.9393939393939394,
+      "threads": 256,
+      "tile_elems": 65536,
+      "operand_elems": 32768,
+      "accum_bytes": 262144,
+      "arithmetic_intensity": 64.0,
+      "elems_per_thread": 256.0
+     },
+     "status": "fail",
+     "failure_class": "launch_resources",
+     "error": "XlaRuntimeError: RESOURCE_EXHAUSTED: Failed to launch CUDA kernel: matmul_kernel__1; block dims: 256x1x1; grid dims: 16x16x1; shared memory size: 67584: CUDA_ERROR_OUT_OF_MEMORY: out of memory"
+    },
+    {
+     "config": [
+      256,
+      256,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 262144,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 2.585858585858586,
+      "threads": 256,
+      "tile_elems": 65536,
+      "operand_elems": 32768,
+      "accum_bytes": 262144,
+      "arithmetic_intensity": 64.0,
+      "elems_per_thread": 256.0
+     },
+     "status": "fail",
+     "failure_class": "launch_resources",
+     "error": "XlaRuntimeError: RESOURCE_EXHAUSTED: Failed to launch CUDA kernel: matmul_kernel__1; block dims: 256x1x1; grid dims: 16x16x1; shared memory size: 67584: CUDA_ERROR_OUT_OF_MEMORY: out of memory"
+    }
+   ],
+   "pruned": []
+  }
+ ]
+}
