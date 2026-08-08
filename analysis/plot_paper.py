@@ -28,8 +28,10 @@ from warm_start import run as warm_run, WARM_K       # noqa: E402
 
 OUT = "paper/figures"
 plt.rcParams.update({
-    "font.size": 8, "axes.titlesize": 8.5, "axes.labelsize": 8,
-    "legend.fontsize": 7.5, "xtick.labelsize": 7.5, "ytick.labelsize": 7.5,
+    "font.family": "Times New Roman",
+    "mathtext.fontset": "stix",          # Times-compatible math glyphs
+    "font.size": 8.5, "axes.titlesize": 9, "axes.labelsize": 8.5,
+    "legend.fontsize": 8, "xtick.labelsize": 8, "ytick.labelsize": 8,
     "axes.spines.top": False, "axes.spines.right": False,
     "pdf.fonttype": 42,
 })
