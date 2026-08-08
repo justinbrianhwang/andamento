@@ -1,0 +1,966 @@
+{
+ "device": "NVIDIA GeForce RTX 2080 Ti",
+ "jax": "0.7.2",
+ "properties": {
+  "smem_per_block": 65536,
+  "smem_per_sm": 1,
+  "max_threads_per_sm": 1024,
+  "sm_count": 68,
+  "compute_capability": [
+   7,
+   5
+  ]
+ },
+ "shape": [
+  4096,
+  4096,
+  4096
+ ],
+ "source": "vast.ai rental, 2026-08-08",
+ "sweeps": [
+  {
+   "dtype": "bf16",
+   "xla_ms": 14.817220624536276,
+   "status": "ok",
+   "results": [],
+   "pruned": [
+    {
+     "config": [
+      32,
+      32,
+      32,
+      4,
+      2
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      32,
+      32,
+      32,
+      4,
+      3
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      32,
+      32,
+      32,
+      4,
+      4
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      32,
+      32,
+      32,
+      8,
+      2
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      32,
+      32,
+      32,
+      8,
+      3
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      32,
+      32,
+      32,
+      8,
+      4
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      64,
+      64,
+      32,
+      4,
+      2
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      64,
+      64,
+      32,
+      4,
+      3
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      64,
+      64,
+      32,
+      4,
+      4
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      64,
+      64,
+      32,
+      8,
+      2
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      64,
+      64,
+      32,
+      8,
+      3
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      64,
+      64,
+      32,
+      8,
+      4
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      64,
+      64,
+      64,
+      4,
+      2
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      64,
+      64,
+      64,
+      4,
+      3
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      64,
+      64,
+      64,
+      4,
+      4
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      64,
+      64,
+      64,
+      8,
+      2
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      64,
+      64,
+      64,
+      8,
+      3
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      64,
+      64,
+      64,
+      8,
+      4
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      64,
+      32,
+      4,
+      2
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      64,
+      32,
+      4,
+      3
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      64,
+      32,
+      4,
+      4
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      64,
+      32,
+      8,
+      2
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      64,
+      32,
+      8,
+      3
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      64,
+      32,
+      8,
+      4
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      64,
+      128,
+      32,
+      4,
+      2
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      64,
+      128,
+      32,
+      4,
+      3
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      64,
+      128,
+      32,
+      4,
+      4
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      64,
+      128,
+      32,
+      8,
+      2
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      64,
+      128,
+      32,
+      8,
+      3
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      64,
+      128,
+      32,
+      8,
+      4
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      128,
+      32,
+      4,
+      2
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      128,
+      32,
+      4,
+      3
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      128,
+      32,
+      4,
+      4
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      128,
+      32,
+      8,
+      2
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      128,
+      32,
+      8,
+      3
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      128,
+      32,
+      8,
+      4
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      128,
+      64,
+      4,
+      2
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      128,
+      64,
+      4,
+      3
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      128,
+      64,
+      4,
+      4
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      128,
+      64,
+      8,
+      2
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      128,
+      64,
+      8,
+      3
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      128,
+      64,
+      8,
+      4
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      256,
+      32,
+      4,
+      2
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      256,
+      32,
+      4,
+      3
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      256,
+      32,
+      4,
+      4
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      256,
+      32,
+      8,
+      2
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      256,
+      32,
+      8,
+      3
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      256,
+      32,
+      8,
+      4
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      256,
+      64,
+      4,
+      2
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      256,
+      64,
+      4,
+      3
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      256,
+      64,
+      4,
+      4
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      256,
+      64,
+      8,
+      2
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      256,
+      64,
+      8,
+      3
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      128,
+      256,
+      64,
+      8,
+      4
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      256,
+      128,
+      32,
+      4,
+      2
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      256,
+      128,
+      32,
+      4,
+      3
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      256,
+      128,
+      32,
+      4,
+      4
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      256,
+      128,
+      32,
+      8,
+      2
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      256,
+      128,
+      32,
+      8,
+      3
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      256,
+      128,
+      32,
+      8,
+      4
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      256,
+      128,
+      64,
+      4,
+      2
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      256,
+      128,
+      64,
+      4,
+      3
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      256,
+      128,
+      64,
+      4,
+      4
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      256,
+      128,
+      64,
+      8,
+      2
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      256,
+      128,
+      64,
+      8,
+      3
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      256,
+      128,
+      64,
+      8,
+      4
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      256,
+      256,
+      32,
+      4,
+      2
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      256,
+      256,
+      32,
+      4,
+      3
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      256,
+      256,
+      32,
+      4,
+      4
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      256,
+      256,
+      32,
+      8,
+      2
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      256,
+      256,
+      32,
+      8,
+      3
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      256,
+      256,
+      32,
+      8,
+      4
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      256,
+      256,
+      64,
+      4,
+      2
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      256,
+      256,
+      64,
+      4,
+      3
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      256,
+      256,
+      64,
+      4,
+      4
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      256,
+      256,
+      64,
+      8,
+      2
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      256,
+      256,
+      64,
+      8,
+      3
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    },
+    {
+     "config": [
+      256,
+      256,
+      64,
+      8,
+      4
+     ],
+     "reasons": [
+      "compute capability 7.5 below Triton minimum 8.0"
+     ]
+    }
+   ]
+  }
+ ]
+}
