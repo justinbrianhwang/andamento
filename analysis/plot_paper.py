@@ -267,10 +267,10 @@ def fig_grid():
         ax1.add_patch(FancyArrowPatch((x + 0.8, 3.05), (4.9, 1.75),
                                       arrowstyle="-|>", mutation_scale=7,
                                       color="#999999", lw=0.7))
-    ax1.add_patch(Rectangle((3.1, 0.9), 3.6, 0.9, facecolor="#fff3cc",
+    ax1.add_patch(Rectangle((2.5, 0.9), 4.8, 0.9, facecolor="#fff3cc",
                             edgecolor="#c9a227", lw=1.0))
     ax1.text(4.9, 1.35, "VMEM scratch accumulator", ha="center",
-             va="center", fontsize=7.5)
+             va="center", fontsize=7)
     ax1.text(4.9, 0.35, "grid steps run in order on one core;\n"
              "the $K$ reduction spans steps ($+\\!=$)",
              ha="center", va="center", fontsize=7, color="#444444")
