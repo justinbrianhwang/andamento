@@ -11,16 +11,23 @@ configuration space on every accelerator Colab offers.
 | Tesla T4 | Triton (GPU) | bf16 | 37.805 ms | none compiled | — | — | — | 8/8 |
 | Tesla T4 | Triton (GPU) | fp16 | 5.843 ms | none compiled | — | — | — | 8/8 |
 | NVIDIA L4 | Triton (GPU) | bf16 | 2.060 ms | `128x128x32` w4s3 1.911 ms | 1.08x | 87.4x | 2/8 | 0/8 |
+| NVIDIA L4 | Triton (GPU) | bf16 | 1.848 ms | `128x256x32` w8s4 1.868 ms | 0.99x | 129.2x | 39/78 | 0/78 |
 | NVIDIA L4 | Triton (GPU) | fp16 | 2.126 ms | `128x128x32` w4s3 1.947 ms | 1.09x | 85.8x | 2/8 | 0/8 |
 | NVIDIA A100-SXM4-40GB | Triton (GPU) | bf16 | 0.895 ms | `128x128x32` w4s3 1.206 ms | 0.74x | 3.8x | 1/6 | 2/8 |
 | NVIDIA A100-SXM4-40GB | Triton (GPU) | bf16 | 0.802 ms | `128x128x32` w4s2 1.190 ms | 0.67x | 5.4x | 12/51 | 27/78 |
 | NVIDIA A100-SXM4-40GB | Triton (GPU) | fp16 | 0.913 ms | `128x128x32` w4s3 1.208 ms | 0.76x | 3.8x | 1/6 | 2/8 |
+| NVIDIA H100 NVL | Triton (GPU) | bf16 | 1.097 ms | `128x256x64` w8s4 1.957 ms | 0.56x | 9.1x | 45/78 | 0/78 |
 | NVIDIA RTX PRO 6000 Blackwell Server Edition | Triton (GPU) | bf16 | 0.459 ms | `128x128x32` w4s3 0.496 ms | 0.93x | 58.7x | 2/8 | 0/8 |
+| NVIDIA RTX PRO 6000 Blackwell Server Edition | Triton (GPU) | bf16 | 0.454 ms | `128x256x32` w8s3 0.480 ms | 0.94x | 68.6x | 33/78 | 0/78 |
 | NVIDIA RTX PRO 6000 Blackwell Server Edition | Triton (GPU) | fp16 | 0.455 ms | `128x128x32` w4s3 0.499 ms | 0.91x | 58.4x | 2/8 | 0/8 |
 | TPU v5 lite | Mosaic (TPU) | bf16 | 0.933 ms | `1024x1024x512` 0.969 ms | 0.96x | 12.0x | 2/5 | 1/6 |
 | TPU v5 lite | Mosaic (TPU) | bf16 | 0.961 ms | `512x1024x1024` 0.976 ms | 0.98x | 12.1x | 39/96 | 29/125 |
 | TPU v6 lite | Mosaic (TPU) | bf16 | 0.338 ms | `512x1024x1024` 0.501 ms | 0.67x | 28.5x | 2/5 | 1/6 |
 | TPU v6 lite | Mosaic (TPU) | bf16 | 0.345 ms | `2048x512x1024` 0.385 ms | 0.90x | 37.0x | 72/116 | 9/125 |
+| NVIDIA B200 | Triton (GPU) | bf16 | 0.433 ms | `128x128x64` w4s2 0.895 ms | 0.48x | 6.0x | 18/78 | 0/78 |
+| NVIDIA GeForce GTX 1060 6GB | Triton (GPU) | bf16 | 44.024 ms | none compiled | — | — | — | 0/0 |
+| NVIDIA GeForce RTX 2080 Ti | Triton (GPU) | bf16 | 14.817 ms | none compiled | — | — | — | 0/0 |
+| NVIDIA GeForce RTX 5090 | Triton (GPU) | bf16 | 2.203 ms | none compiled | — | — | — | 78/78 |
 
 ## How bad configurations announce themselves
 
@@ -30,6 +37,7 @@ autotuner can prune for free.
 - **Tesla T4 (bf16)**: no configuration compiled. `XlaRuntimeError: FAILED_PRECONDITION: Triton support is only enabled for Ampere GPUs (compute capability 8.0) and up, bu`
 - **Tesla T4 (fp16)**: no configuration compiled. `XlaRuntimeError: FAILED_PRECONDITION: Triton support is only enabled for Ampere GPUs (compute capability 8.0) and up, bu`
 - **NVIDIA L4 (bf16)**: `256x256x64` compiles cleanly and then runs 87x slower than the best config (167.0 ms vs 1.911 ms) — no error, no warning.
+- **NVIDIA L4 (bf16)**: `256x256x32` compiles cleanly and then runs 129x slower than the best config (241.3 ms vs 1.868 ms) — no error, no warning.
 - **NVIDIA L4 (fp16)**: `256x256x64` compiles cleanly and then runs 86x slower than the best config (167.1 ms vs 1.947 ms) — no error, no warning.
 - **NVIDIA A100-SXM4-40GB (bf16)**: `32x32x32` compiles cleanly and then runs 4x slower than the best config (4.6 ms vs 1.206 ms) — no error, no warning.
 - **NVIDIA A100-SXM4-40GB (bf16)**: `256x128x64` refuses to compile — `XlaRuntimeError: RESOURCE_EXHAUSTED: Failed to launch CUDA kernel: matmul_kernel__1; block dims: 256`
@@ -37,7 +45,9 @@ autotuner can prune for free.
 - **NVIDIA A100-SXM4-40GB (bf16)**: `128x256x32` refuses to compile — `XlaRuntimeError: RESOURCE_EXHAUSTED: Failed to launch CUDA kernel: matmul_kernel__1; block dims: 128`
 - **NVIDIA A100-SXM4-40GB (fp16)**: `32x32x32` compiles cleanly and then runs 4x slower than the best config (4.6 ms vs 1.208 ms) — no error, no warning.
 - **NVIDIA A100-SXM4-40GB (fp16)**: `256x128x64` refuses to compile — `XlaRuntimeError: RESOURCE_EXHAUSTED: Failed to launch CUDA kernel: matmul_kernel__1; block dims: 256`
+- **NVIDIA H100 NVL (bf16)**: `32x32x32` compiles cleanly and then runs 9x slower than the best config (17.9 ms vs 1.957 ms) — no error, no warning.
 - **NVIDIA RTX PRO 6000 Blackwell Server Edition (bf16)**: `256x256x64` compiles cleanly and then runs 59x slower than the best config (29.1 ms vs 0.496 ms) — no error, no warning.
+- **NVIDIA RTX PRO 6000 Blackwell Server Edition (bf16)**: `256x256x32` compiles cleanly and then runs 69x slower than the best config (33.0 ms vs 0.480 ms) — no error, no warning.
 - **NVIDIA RTX PRO 6000 Blackwell Server Edition (fp16)**: `256x256x64` compiles cleanly and then runs 58x slower than the best config (29.1 ms vs 0.499 ms) — no error, no warning.
 - **TPU v5 lite (bf16)**: `128x128x128` compiles cleanly and then runs 12x slower than the best config (11.7 ms vs 0.969 ms) — no error, no warning.
 - **TPU v5 lite (bf16)**: `2048x2048x512` refuses to compile — `JaxRuntimeError: RESOURCE_EXHAUSTED: E1001: CompileTimeScopedVmemOom: Ran out of memory in memory sp`
@@ -50,3 +60,5 @@ Ran out of memory in memory sp`
 - **TPU v6 lite (bf16)**: `128x128x128` compiles cleanly and then runs 37x slower than the best config (14.2 ms vs 0.385 ms) — no error, no warning.
 - **TPU v6 lite (bf16)**: `1024x2048x2048` refuses to compile — `JaxRuntimeError: RESOURCE_EXHAUSTED: E1001: CompileTimeScopedVmemOom:
 Ran out of memory in memory sp`
+- **NVIDIA B200 (bf16)**: `256x256x32` compiles cleanly and then runs 6x slower than the best config (5.4 ms vs 0.895 ms) — no error, no warning.
+- **NVIDIA GeForce RTX 5090 (bf16)**: no configuration compiled. `RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.shardi`
