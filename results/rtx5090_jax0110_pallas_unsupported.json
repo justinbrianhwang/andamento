@@ -1,0 +1,1823 @@
+{
+ "device": "NVIDIA GeForce RTX 5090",
+ "jax": "0.11.0",
+ "properties": {
+  "smem_per_block": 101376,
+  "smem_per_sm": 1,
+  "max_threads_per_sm": 1536,
+  "sm_count": 170,
+  "compute_capability": [
+   12,
+   0
+  ]
+ },
+ "shape": [
+  4096,
+  4096,
+  4096
+ ],
+ "sweeps": [
+  {
+   "dtype": "bf16",
+   "xla_ms": 2.2026725055184215,
+   "status": "ok",
+   "results": [
+    {
+     "config": [
+      32,
+      32,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 8192,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.08080808080808081,
+      "threads": 128,
+      "tile_elems": 1024,
+      "operand_elems": 2048,
+      "accum_bytes": 4096,
+      "arithmetic_intensity": 8.0,
+      "elems_per_thread": 8.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      32,
+      32,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 12288,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.12121212121212122,
+      "threads": 128,
+      "tile_elems": 1024,
+      "operand_elems": 2048,
+      "accum_bytes": 4096,
+      "arithmetic_intensity": 8.0,
+      "elems_per_thread": 8.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      32,
+      32,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 16384,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.16161616161616163,
+      "threads": 128,
+      "tile_elems": 1024,
+      "operand_elems": 2048,
+      "accum_bytes": 4096,
+      "arithmetic_intensity": 8.0,
+      "elems_per_thread": 8.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      32,
+      32,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 8192,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.08080808080808081,
+      "threads": 256,
+      "tile_elems": 1024,
+      "operand_elems": 2048,
+      "accum_bytes": 4096,
+      "arithmetic_intensity": 8.0,
+      "elems_per_thread": 4.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      32,
+      32,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 12288,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.12121212121212122,
+      "threads": 256,
+      "tile_elems": 1024,
+      "operand_elems": 2048,
+      "accum_bytes": 4096,
+      "arithmetic_intensity": 8.0,
+      "elems_per_thread": 4.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      32,
+      32,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 16384,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.16161616161616163,
+      "threads": 256,
+      "tile_elems": 1024,
+      "operand_elems": 2048,
+      "accum_bytes": 4096,
+      "arithmetic_intensity": 8.0,
+      "elems_per_thread": 4.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      64,
+      64,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 16384,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.16161616161616163,
+      "threads": 128,
+      "tile_elems": 4096,
+      "operand_elems": 4096,
+      "accum_bytes": 16384,
+      "arithmetic_intensity": 16.0,
+      "elems_per_thread": 32.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      64,
+      64,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 24576,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.24242424242424243,
+      "threads": 128,
+      "tile_elems": 4096,
+      "operand_elems": 4096,
+      "accum_bytes": 16384,
+      "arithmetic_intensity": 16.0,
+      "elems_per_thread": 32.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      64,
+      64,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 32768,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.32323232323232326,
+      "threads": 128,
+      "tile_elems": 4096,
+      "operand_elems": 4096,
+      "accum_bytes": 16384,
+      "arithmetic_intensity": 16.0,
+      "elems_per_thread": 32.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      64,
+      64,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 16384,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.16161616161616163,
+      "threads": 256,
+      "tile_elems": 4096,
+      "operand_elems": 4096,
+      "accum_bytes": 16384,
+      "arithmetic_intensity": 16.0,
+      "elems_per_thread": 16.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      64,
+      64,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 24576,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.24242424242424243,
+      "threads": 256,
+      "tile_elems": 4096,
+      "operand_elems": 4096,
+      "accum_bytes": 16384,
+      "arithmetic_intensity": 16.0,
+      "elems_per_thread": 16.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      64,
+      64,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 32768,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.32323232323232326,
+      "threads": 256,
+      "tile_elems": 4096,
+      "operand_elems": 4096,
+      "accum_bytes": 16384,
+      "arithmetic_intensity": 16.0,
+      "elems_per_thread": 16.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      64,
+      64,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 32768,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.32323232323232326,
+      "threads": 128,
+      "tile_elems": 4096,
+      "operand_elems": 8192,
+      "accum_bytes": 16384,
+      "arithmetic_intensity": 16.0,
+      "elems_per_thread": 32.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      64,
+      64,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 49152,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.48484848484848486,
+      "threads": 128,
+      "tile_elems": 4096,
+      "operand_elems": 8192,
+      "accum_bytes": 16384,
+      "arithmetic_intensity": 16.0,
+      "elems_per_thread": 32.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      64,
+      64,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 65536,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.6464646464646465,
+      "threads": 128,
+      "tile_elems": 4096,
+      "operand_elems": 8192,
+      "accum_bytes": 16384,
+      "arithmetic_intensity": 16.0,
+      "elems_per_thread": 32.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      64,
+      64,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 32768,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.32323232323232326,
+      "threads": 256,
+      "tile_elems": 4096,
+      "operand_elems": 8192,
+      "accum_bytes": 16384,
+      "arithmetic_intensity": 16.0,
+      "elems_per_thread": 16.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      64,
+      64,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 49152,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.48484848484848486,
+      "threads": 256,
+      "tile_elems": 4096,
+      "operand_elems": 8192,
+      "accum_bytes": 16384,
+      "arithmetic_intensity": 16.0,
+      "elems_per_thread": 16.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      64,
+      64,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 65536,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.6464646464646465,
+      "threads": 256,
+      "tile_elems": 4096,
+      "operand_elems": 8192,
+      "accum_bytes": 16384,
+      "arithmetic_intensity": 16.0,
+      "elems_per_thread": 16.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      64,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 24576,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.24242424242424243,
+      "threads": 128,
+      "tile_elems": 8192,
+      "operand_elems": 6144,
+      "accum_bytes": 32768,
+      "arithmetic_intensity": 21.333333333333332,
+      "elems_per_thread": 64.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      64,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 36864,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.36363636363636365,
+      "threads": 128,
+      "tile_elems": 8192,
+      "operand_elems": 6144,
+      "accum_bytes": 32768,
+      "arithmetic_intensity": 21.333333333333332,
+      "elems_per_thread": 64.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      64,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 49152,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.48484848484848486,
+      "threads": 128,
+      "tile_elems": 8192,
+      "operand_elems": 6144,
+      "accum_bytes": 32768,
+      "arithmetic_intensity": 21.333333333333332,
+      "elems_per_thread": 64.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      64,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 24576,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.24242424242424243,
+      "threads": 256,
+      "tile_elems": 8192,
+      "operand_elems": 6144,
+      "accum_bytes": 32768,
+      "arithmetic_intensity": 21.333333333333332,
+      "elems_per_thread": 32.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      64,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 36864,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.36363636363636365,
+      "threads": 256,
+      "tile_elems": 8192,
+      "operand_elems": 6144,
+      "accum_bytes": 32768,
+      "arithmetic_intensity": 21.333333333333332,
+      "elems_per_thread": 32.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      64,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 49152,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.48484848484848486,
+      "threads": 256,
+      "tile_elems": 8192,
+      "operand_elems": 6144,
+      "accum_bytes": 32768,
+      "arithmetic_intensity": 21.333333333333332,
+      "elems_per_thread": 32.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      64,
+      128,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 24576,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.24242424242424243,
+      "threads": 128,
+      "tile_elems": 8192,
+      "operand_elems": 6144,
+      "accum_bytes": 32768,
+      "arithmetic_intensity": 21.333333333333332,
+      "elems_per_thread": 64.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      64,
+      128,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 36864,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.36363636363636365,
+      "threads": 128,
+      "tile_elems": 8192,
+      "operand_elems": 6144,
+      "accum_bytes": 32768,
+      "arithmetic_intensity": 21.333333333333332,
+      "elems_per_thread": 64.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      64,
+      128,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 49152,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.48484848484848486,
+      "threads": 128,
+      "tile_elems": 8192,
+      "operand_elems": 6144,
+      "accum_bytes": 32768,
+      "arithmetic_intensity": 21.333333333333332,
+      "elems_per_thread": 64.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      64,
+      128,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 24576,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.24242424242424243,
+      "threads": 256,
+      "tile_elems": 8192,
+      "operand_elems": 6144,
+      "accum_bytes": 32768,
+      "arithmetic_intensity": 21.333333333333332,
+      "elems_per_thread": 32.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      64,
+      128,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 36864,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.36363636363636365,
+      "threads": 256,
+      "tile_elems": 8192,
+      "operand_elems": 6144,
+      "accum_bytes": 32768,
+      "arithmetic_intensity": 21.333333333333332,
+      "elems_per_thread": 32.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      64,
+      128,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 49152,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.48484848484848486,
+      "threads": 256,
+      "tile_elems": 8192,
+      "operand_elems": 6144,
+      "accum_bytes": 32768,
+      "arithmetic_intensity": 21.333333333333332,
+      "elems_per_thread": 32.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      128,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 32768,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.32323232323232326,
+      "threads": 128,
+      "tile_elems": 16384,
+      "operand_elems": 8192,
+      "accum_bytes": 65536,
+      "arithmetic_intensity": 32.0,
+      "elems_per_thread": 128.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      128,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 49152,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.48484848484848486,
+      "threads": 128,
+      "tile_elems": 16384,
+      "operand_elems": 8192,
+      "accum_bytes": 65536,
+      "arithmetic_intensity": 32.0,
+      "elems_per_thread": 128.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      128,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 65536,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.6464646464646465,
+      "threads": 128,
+      "tile_elems": 16384,
+      "operand_elems": 8192,
+      "accum_bytes": 65536,
+      "arithmetic_intensity": 32.0,
+      "elems_per_thread": 128.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      128,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 32768,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.32323232323232326,
+      "threads": 256,
+      "tile_elems": 16384,
+      "operand_elems": 8192,
+      "accum_bytes": 65536,
+      "arithmetic_intensity": 32.0,
+      "elems_per_thread": 64.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      128,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 49152,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.48484848484848486,
+      "threads": 256,
+      "tile_elems": 16384,
+      "operand_elems": 8192,
+      "accum_bytes": 65536,
+      "arithmetic_intensity": 32.0,
+      "elems_per_thread": 64.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      128,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 65536,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.6464646464646465,
+      "threads": 256,
+      "tile_elems": 16384,
+      "operand_elems": 8192,
+      "accum_bytes": 65536,
+      "arithmetic_intensity": 32.0,
+      "elems_per_thread": 64.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      128,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 65536,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.6464646464646465,
+      "threads": 128,
+      "tile_elems": 16384,
+      "operand_elems": 16384,
+      "accum_bytes": 65536,
+      "arithmetic_intensity": 32.0,
+      "elems_per_thread": 128.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      128,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 98304,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.9696969696969697,
+      "threads": 128,
+      "tile_elems": 16384,
+      "operand_elems": 16384,
+      "accum_bytes": 65536,
+      "arithmetic_intensity": 32.0,
+      "elems_per_thread": 128.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      128,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 131072,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.292929292929293,
+      "threads": 128,
+      "tile_elems": 16384,
+      "operand_elems": 16384,
+      "accum_bytes": 65536,
+      "arithmetic_intensity": 32.0,
+      "elems_per_thread": 128.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      128,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 65536,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.6464646464646465,
+      "threads": 256,
+      "tile_elems": 16384,
+      "operand_elems": 16384,
+      "accum_bytes": 65536,
+      "arithmetic_intensity": 32.0,
+      "elems_per_thread": 64.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      128,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 98304,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.9696969696969697,
+      "threads": 256,
+      "tile_elems": 16384,
+      "operand_elems": 16384,
+      "accum_bytes": 65536,
+      "arithmetic_intensity": 32.0,
+      "elems_per_thread": 64.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      128,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 131072,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.292929292929293,
+      "threads": 256,
+      "tile_elems": 16384,
+      "operand_elems": 16384,
+      "accum_bytes": 65536,
+      "arithmetic_intensity": 32.0,
+      "elems_per_thread": 64.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      256,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 49152,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.48484848484848486,
+      "threads": 128,
+      "tile_elems": 32768,
+      "operand_elems": 12288,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 256.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      256,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 73728,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.7272727272727273,
+      "threads": 128,
+      "tile_elems": 32768,
+      "operand_elems": 12288,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 256.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      256,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 98304,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.9696969696969697,
+      "threads": 128,
+      "tile_elems": 32768,
+      "operand_elems": 12288,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 256.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      256,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 49152,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.48484848484848486,
+      "threads": 256,
+      "tile_elems": 32768,
+      "operand_elems": 12288,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 128.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      256,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 73728,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.7272727272727273,
+      "threads": 256,
+      "tile_elems": 32768,
+      "operand_elems": 12288,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 128.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      256,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 98304,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.9696969696969697,
+      "threads": 256,
+      "tile_elems": 32768,
+      "operand_elems": 12288,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 128.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      256,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 98304,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.9696969696969697,
+      "threads": 128,
+      "tile_elems": 32768,
+      "operand_elems": 24576,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 256.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      256,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 147456,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.4545454545454546,
+      "threads": 128,
+      "tile_elems": 32768,
+      "operand_elems": 24576,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 256.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      256,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 196608,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.9393939393939394,
+      "threads": 128,
+      "tile_elems": 32768,
+      "operand_elems": 24576,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 256.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      256,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 98304,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.9696969696969697,
+      "threads": 256,
+      "tile_elems": 32768,
+      "operand_elems": 24576,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 128.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      256,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 147456,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.4545454545454546,
+      "threads": 256,
+      "tile_elems": 32768,
+      "operand_elems": 24576,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 128.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      128,
+      256,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 196608,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.9393939393939394,
+      "threads": 256,
+      "tile_elems": 32768,
+      "operand_elems": 24576,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 128.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      256,
+      128,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 49152,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.48484848484848486,
+      "threads": 128,
+      "tile_elems": 32768,
+      "operand_elems": 12288,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 256.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      256,
+      128,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 73728,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.7272727272727273,
+      "threads": 128,
+      "tile_elems": 32768,
+      "operand_elems": 12288,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 256.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      256,
+      128,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 98304,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.9696969696969697,
+      "threads": 128,
+      "tile_elems": 32768,
+      "operand_elems": 12288,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 256.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      256,
+      128,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 49152,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.48484848484848486,
+      "threads": 256,
+      "tile_elems": 32768,
+      "operand_elems": 12288,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 128.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      256,
+      128,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 73728,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.7272727272727273,
+      "threads": 256,
+      "tile_elems": 32768,
+      "operand_elems": 12288,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 128.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      256,
+      128,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 98304,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.9696969696969697,
+      "threads": 256,
+      "tile_elems": 32768,
+      "operand_elems": 12288,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 128.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      256,
+      128,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 98304,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.9696969696969697,
+      "threads": 128,
+      "tile_elems": 32768,
+      "operand_elems": 24576,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 256.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      256,
+      128,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 147456,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.4545454545454546,
+      "threads": 128,
+      "tile_elems": 32768,
+      "operand_elems": 24576,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 256.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      256,
+      128,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 196608,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.9393939393939394,
+      "threads": 128,
+      "tile_elems": 32768,
+      "operand_elems": 24576,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 256.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      256,
+      128,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 98304,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.9696969696969697,
+      "threads": 256,
+      "tile_elems": 32768,
+      "operand_elems": 24576,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 128.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      256,
+      128,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 147456,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.4545454545454546,
+      "threads": 256,
+      "tile_elems": 32768,
+      "operand_elems": 24576,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 128.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      256,
+      128,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 196608,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.9393939393939394,
+      "threads": 256,
+      "tile_elems": 32768,
+      "operand_elems": 24576,
+      "accum_bytes": 131072,
+      "arithmetic_intensity": 42.666666666666664,
+      "elems_per_thread": 128.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      256,
+      256,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 65536,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.6464646464646465,
+      "threads": 128,
+      "tile_elems": 65536,
+      "operand_elems": 16384,
+      "accum_bytes": 262144,
+      "arithmetic_intensity": 64.0,
+      "elems_per_thread": 512.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      256,
+      256,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 98304,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.9696969696969697,
+      "threads": 128,
+      "tile_elems": 65536,
+      "operand_elems": 16384,
+      "accum_bytes": 262144,
+      "arithmetic_intensity": 64.0,
+      "elems_per_thread": 512.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      256,
+      256,
+      32
+     ],
+     "num_warps": 4,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 131072,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.292929292929293,
+      "threads": 128,
+      "tile_elems": 65536,
+      "operand_elems": 16384,
+      "accum_bytes": 262144,
+      "arithmetic_intensity": 64.0,
+      "elems_per_thread": 512.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      256,
+      256,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 65536,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.6464646464646465,
+      "threads": 256,
+      "tile_elems": 65536,
+      "operand_elems": 16384,
+      "accum_bytes": 262144,
+      "arithmetic_intensity": 64.0,
+      "elems_per_thread": 256.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      256,
+      256,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 98304,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 0.9696969696969697,
+      "threads": 256,
+      "tile_elems": 65536,
+      "operand_elems": 16384,
+      "accum_bytes": 262144,
+      "arithmetic_intensity": 64.0,
+      "elems_per_thread": 256.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      256,
+      256,
+      32
+     ],
+     "num_warps": 8,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 131072,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.292929292929293,
+      "threads": 256,
+      "tile_elems": 65536,
+      "operand_elems": 16384,
+      "accum_bytes": 262144,
+      "arithmetic_intensity": 64.0,
+      "elems_per_thread": 256.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      256,
+      256,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 131072,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.292929292929293,
+      "threads": 128,
+      "tile_elems": 65536,
+      "operand_elems": 32768,
+      "accum_bytes": 262144,
+      "arithmetic_intensity": 64.0,
+      "elems_per_thread": 512.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      256,
+      256,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 196608,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.9393939393939394,
+      "threads": 128,
+      "tile_elems": 65536,
+      "operand_elems": 32768,
+      "accum_bytes": 262144,
+      "arithmetic_intensity": 64.0,
+      "elems_per_thread": 512.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      256,
+      256,
+      64
+     ],
+     "num_warps": 4,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 262144,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 2.585858585858586,
+      "threads": 128,
+      "tile_elems": 65536,
+      "operand_elems": 32768,
+      "accum_bytes": 262144,
+      "arithmetic_intensity": 64.0,
+      "elems_per_thread": 512.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      256,
+      256,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 2,
+     "features": {
+      "smem_estimate_bytes": 131072,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.292929292929293,
+      "threads": 256,
+      "tile_elems": 65536,
+      "operand_elems": 32768,
+      "accum_bytes": 262144,
+      "arithmetic_intensity": 64.0,
+      "elems_per_thread": 256.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      256,
+      256,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 3,
+     "features": {
+      "smem_estimate_bytes": 196608,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 1.9393939393939394,
+      "threads": 256,
+      "tile_elems": 65536,
+      "operand_elems": 32768,
+      "accum_bytes": 262144,
+      "arithmetic_intensity": 64.0,
+      "elems_per_thread": 256.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    },
+    {
+     "config": [
+      256,
+      256,
+      64
+     ],
+     "num_warps": 8,
+     "num_stages": 4,
+     "features": {
+      "smem_estimate_bytes": 262144,
+      "smem_limit_bytes": 101376,
+      "smem_ratio": 2.585858585858586,
+      "threads": 256,
+      "tile_elems": 65536,
+      "operand_elems": 32768,
+      "accum_bytes": 262144,
+      "arithmetic_intensity": 64.0,
+      "elems_per_thread": 256.0
+     },
+     "status": "fail",
+     "failure_class": "other",
+     "error": "RuntimeError: No supported GPU devices found, please specify an abstract GPU device using AbstractDevice. See jax.sharding.use_abstract_mesh method for example."
+    }
+   ],
+   "pruned": []
+  }
+ ]
+}
