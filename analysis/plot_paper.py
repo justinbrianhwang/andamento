@@ -253,7 +253,7 @@ def fig_warmstart():
     cbar = fig.colorbar(im, ax=ax, fraction=0.046, pad=0.03)
     cbar.set_label("warm $-$ cold mean regret at $B{=}20$", fontsize=7)
     fig.tight_layout()
-    fig.savefig(f"{OUT}/fig-warmstart.pdf")
+    fig.savefig(f"{OUT}/fig-warmstart.pdf", dpi=300)
     plt.close(fig)
 
 
